@@ -1,114 +1,29 @@
-<!DOCTYPE html>
-<html lang="en" data-world="pink">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BOOK'D — Dynamic Worlds & AI Booking</title>
-  <link rel="stylesheet" href="variables.css" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+<!-- AI FLOATING CHAT LAUNCHER WITH VIBE ALERT -->
+<div class="chat-launcher-wrapper">
+  <div class="chat-vibe-pill" onclick="toggleChat()">
+    CLICK TO VIBE ✨
+  </div>
+  <button class="chat-launcher" onclick="toggleChat()">
+    💬
+  </button>
+</div>
 
-  <div class="app-viewport">
-    
-    <!-- App Header (Blue & Purple Logo Permanently Anchored) -->
-    <header class="app-header">
-      <div style="display: flex; align-items: center;">
-        <div class="logo-badge">✓</div>
-        <span class="brand-title">BOOK'D</span>
-      </div>
-      <span style="font-size: 1.1rem; cursor: pointer;">🔔</span>
-    </header>
-
-    <!-- VIEW 1: HOME VIEW -->
-    <main id="homeView" class="view active">
-      <h2 style="font-size: 1.2rem; margin-bottom: 4px;">Explore Services</h2>
-      <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px;">
-        Tap a category to switch environment worlds.
-      </p>
-
-      <!-- Category Buttons Triggering Worlds -->
-      <div class="category-grid">
-        <div class="category-chip" data-cat="pink" onclick="switchWorld('pink', 'Salons & Lashes')">
-          <div class="icon-circle">💅</div>
-          <span>Salons</span>
-        </div>
-        <div class="category-chip" data-cat="blue" onclick="switchWorld('blue', 'Barbers & Grooming')">
-          <div class="icon-circle">💈</div>
-          <span>Barbers</span>
-        </div>
-        <div class="category-chip" data-cat="purple" onclick="switchWorld('purple', 'Spa & Wellness')">
-          <div class="icon-circle">🧘</div>
-          <span>Spa</span>
-        </div>
-        <div class="category-chip" data-cat="yellow" onclick="switchWorld('yellow', 'Food & Dining')">
-          <div class="icon-circle">🍔</div>
-          <span>Food</span>
-        </div>
-      </div>
-
-      <!-- Featured Services Section -->
-      <h3 style="font-size: 0.9rem; margin: 16px 0 8px;">Featured Places</h3>
-
-      <div class="business-card">
-        <img src="https://via.placeholder.com/60" alt="Salon" />
-        <div style="flex: 1;">
-          <h4 style="font-size: 0.85rem;">The Luxe Lash & Hair Studio</h4>
-          <p style="font-size: 0.7rem; color: var(--text-muted);">Beauty & Salons</p>
-          <span style="font-size: 0.75rem; color: var(--world-primary); font-weight: 700;">From $45</span>
-        </div>
-      </div>
-    </main>
-
-    <!-- VIEW 2: CATEGORY RESULTS VIEW -->
-    <main id="resultsView" class="view">
-      <h2 id="categoryTitle" style="font-size: 1.2rem; margin-bottom: 12px;">Category World</h2>
-      
-      <div class="business-card">
-        <img src="https://via.placeholder.com/60" alt="Provider" />
-        <div style="flex: 1;">
-          <h4 style="font-size: 0.85rem;">Top Rated Venue</h4>
-          <p style="font-size: 0.7rem; color: var(--text-muted);">Open Today • 4.9 ★</p>
-          <button class="btn-primary" style="margin-top: 8px; padding: 8px;" onclick="showView('bookingView')">Book Now</button>
-        </div>
-      </div>
-    </main>
-
-    <!-- VIEW 3: BOOKING VIEW -->
-    <main id="bookingView" class="view">
-      <h2 style="font-size: 1.2rem; margin-bottom: 8px;">Select Appointment</h2>
-      <div style="background: var(--card-bg); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--world-border);">
-        <p style="font-size: 0.8rem; font-weight: bold;">Choose Time Slot</p>
-        <button class="btn-primary" style="margin-top: 12px;" onclick="alert('Booking Confirmed!')">Confirm Appointment</button>
-      </div>
-    </main>
-
-    <!-- AI Assistant Floating Button -->
-    <button class="chat-launcher" onclick="toggleChat()">✨</button>
-
-    <!-- Integrated AI Assistant Panel -->
-    <div id="chatModal" class="chat-modal">
-      <div class="chat-header">
-        <div style="display: flex; align-items: center; gap: 8px;">
-          <div class="logo-badge" style="width: 24px; height: 24px; font-size: 0.7rem;">✓</div>
-          <strong style="font-size: 0.85rem;">BOOK'D Assistant</strong>
-        </div>
-        <span style="cursor: pointer; font-size: 1.2rem;" onclick="toggleChat()">✕</span>
-      </div>
-      <div class="chat-messages">
-        <div class="chat-bubble bot">Hi! What are you looking to book today?</div>
+<!-- EXPANDABLE CHAT MODAL -->
+<div id="chatModal" class="chat-modal">
+  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--card-border); padding-bottom: 10px;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div class="logo-badge" style="width: 24px; height: 24px; font-size: 0.7rem;">✓</div>
+      <div>
+        <strong style="font-size: 0.85rem; display: block; line-height: 1.1;">BOOK'D AI Bot</strong>
+        <span style="font-size: 0.65rem; color: var(--neon-blue);">Online • City Navigator</span>
       </div>
     </div>
-
-    <!-- Navigation Bar -->
-    <nav class="bottom-nav">
-      <div class="nav-item active" onclick="showView('homeView')"><span>🏠</span><span>Home</span></div>
-      <div class="nav-item" onclick="showView('resultsView')"><span>🔍</span><span>Explore</span></div>
-      <div class="nav-item" onclick="showView('bookingView')"><span>📅</span><span>Bookings</span></div>
-    </nav>
-
+    <span style="cursor: pointer; font-size: 1.2rem; padding: 4px;" onclick="toggleChat()">✕</span>
   </div>
 
-  <script src="app.js"></script>
-</body>
-</html>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-bubble bot">
+      Yo! What’s the move today? I can help you find open slots, matched vibes, or lock down a booking anywhere in your city. ⚡
+    </div>
+  </div>
+</div>

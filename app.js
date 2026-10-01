@@ -41,10 +41,10 @@ function layout(content, topbar = true, theme = "theme-default") {
 /* =========================
    CATEGORY DATA
 ========================= */
-
 const categories = [
   {
-    label: "💇 Hair & Beauty",
+    label: "Hair & Beauty",
+    icon: "✂️",
     theme: "theme-beauty",
     services: [
       "Women's Haircut",
@@ -53,7 +53,8 @@ const categories = [
     ]
   },
   {
-    label: "💪 Fitness",
+    label: "Fitness",
+    icon: "⚡",
     theme: "theme-fitness",
     services: [
       "Personal Training",
@@ -62,7 +63,8 @@ const categories = [
     ]
   },
   {
-    label: "💅 Nails",
+    label: "Nails",
+    icon: "💎",
     theme: "theme-beauty",
     services: [
       "Gel Manicure",
@@ -71,7 +73,8 @@ const categories = [
     ]
   },
   {
-    label: "💈 Barbers",
+    label: "Barbers",
+    icon: "💈",
     theme: "theme-barbers",
     services: [
       "Men's Haircut",
@@ -80,7 +83,8 @@ const categories = [
     ]
   },
   {
-    label: "💄 Makeup",
+    label: "Makeup",
+    icon: "💄",
     theme: "theme-beauty",
     services: [
       "Full Glam",
@@ -89,7 +93,8 @@ const categories = [
     ]
   },
   {
-    label: "✨ More",
+    label: "More",
+    icon: "✨",
     theme: "theme-default",
     services: [
       "Massage",
@@ -98,67 +103,6 @@ const categories = [
     ]
   }
 ];
-
-/* =========================
-   SERVICE CARD
-========================= */
-
-function serviceCard(service, index = 0) {
-  return `
-    <article class="service-card">
-      <div class="service-image">
-        ${index === 0 ? "✨" : index === 1 ? "🔥" : "⭐"}
-      </div>
-
-      <div class="service-content">
-        <h3>${service}</h3>
-        <p class="text-muted">Book a local professional</p>
-
-        <button
-          class="btn btn-primary"
-          onclick="location.hash='#/book'"
-        >
-          Book Now
-        </button>
-      </div>
-    </article>
-  `;
-}
-
-/* =========================
-   HOME
-========================= */
-
-function renderHome() {
-  const state = getState();
-  const name = state.user?.name || "there";
-
-  return layout(`
-    <main class="container">
-
-      <section class="hero">
-        <div class="hero-copy">
-
-          <p class="eyebrow">BOOKED</p>
-
-          <h1>
-            Welcome to ${name}
-          </h1>
-
-          <p>
-            What are you looking for today?
-          </p>
-
-          <div class="search">
-            <span>🔎</span>
-            <input
-              type="text"
-              placeholder="Search services, businesses..."
-            />
-          </div>
-
-        </div>
-      </section>
 
       <section class="section">
 

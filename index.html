@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BOOK'D — Multi-World Experience</title>
+  <title>BOOK'D — Real People. Real Services. Real Time.</title>
   <style>
     :root {
       --bg-dark: #050711;
@@ -12,48 +12,48 @@
       --text-white: #ffffff;
       --text-muted: #94a3b8;
 
-      /* Raw Neon Palette */
+      /* Official Updated Palette (No Gold/Yellow) */
+      --neon-red: #ff0033;
+      --neon-magenta: #ff00a0;
       --neon-blue: #00f0ff;
       --neon-purple: #8000ff;
-      --neon-pink: #ff00a0;
-      --neon-yellow: #ffe600;
-      --neon-red: #ff0033;
+      --neon-teal: #00f5d4;
 
-      --brand-gradient: linear-gradient(135deg, #ff0033 0%, #8000ff 30%, #ff00a0 60%, #00f0ff 85%, #ffe600 100%);
-      --brand-glow: 0 0 20px rgba(255, 0, 51, 0.4), 0 0 25px rgba(0, 240, 255, 0.4);
+      --brand-gradient: linear-gradient(135deg, #ff0033 0%, #8000ff 40%, #ff00a0 70%, #00f0ff 100%);
+      --brand-glow: 0 0 25px rgba(255, 0, 51, 0.35), 0 0 30px rgba(255, 0, 160, 0.35);
 
-      --world-primary: var(--neon-pink);
-      --world-gradient: linear-gradient(135deg, #ff00a0, #ff0033, #ffe600);
-      --world-glow: 0 0 20px rgba(255, 0, 160, 0.4);
+      --world-primary: var(--neon-magenta);
+      --world-gradient: linear-gradient(135deg, #ff00a0, #ff0033);
+      --world-glow: 0 0 22px rgba(255, 0, 160, 0.4);
       --world-border: rgba(255, 0, 160, 0.4);
     }
 
     [data-world="pink"] {
-      --world-primary: var(--neon-pink);
+      --world-primary: var(--neon-magenta);
       --world-gradient: linear-gradient(135deg, #ff00a0, #ff0033);
-      --world-glow: 0 0 22px rgba(255, 0, 160, 0.45);
+      --world-glow: 0 0 22px rgba(255, 0, 160, 0.4);
       --world-border: rgba(255, 0, 160, 0.5);
     }
 
     [data-world="blue"] {
       --world-primary: var(--neon-blue);
       --world-gradient: linear-gradient(135deg, #00f0ff, #8000ff);
-      --world-glow: 0 0 22px rgba(0, 240, 255, 0.45);
+      --world-glow: 0 0 22px rgba(0, 240, 255, 0.4);
       --world-border: rgba(0, 240, 255, 0.5);
     }
 
     [data-world="purple"] {
       --world-primary: var(--neon-purple);
       --world-gradient: linear-gradient(135deg, #8000ff, #ff0033);
-      --world-glow: 0 0 22px rgba(128, 0, 255, 0.45);
+      --world-glow: 0 0 22px rgba(128, 0, 255, 0.4);
       --world-border: rgba(128, 0, 255, 0.5);
     }
 
-    [data-world="yellow"] {
-      --world-primary: var(--neon-yellow);
-      --world-gradient: linear-gradient(135deg, #ffe600, #ff0033);
-      --world-glow: 0 0 22px rgba(255, 230, 0, 0.45);
-      --world-border: rgba(255, 230, 0, 0.5);
+    [data-world="red"] {
+      --world-primary: var(--neon-red);
+      --world-gradient: linear-gradient(135deg, #ff0033, #8000ff);
+      --world-glow: 0 0 22px rgba(255, 0, 51, 0.4);
+      --world-border: rgba(255, 0, 51, 0.5);
     }
 
     * {
@@ -99,10 +99,8 @@
       top: 0;
       z-index: 90;
       border-bottom: 1px solid var(--world-border);
-      transition: border-color 0.4s ease;
     }
 
-    /* Exact Brand Logo Badge */
     .brand-logo-container {
       display: flex;
       align-items: center;
@@ -113,14 +111,14 @@
     .logo-badge-exact {
       width: 38px;
       height: 38px;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      background: linear-gradient(135deg, #150918, #2a0823, #11051b);
       border-radius: 12px;
-      border: 2px solid var(--neon-blue);
+      border: 2px solid var(--neon-red);
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.5), inset 0 0 10px rgba(255, 0, 160, 0.4);
+      box-shadow: 0 0 15px rgba(255, 0, 51, 0.5), inset 0 0 10px rgba(255, 0, 160, 0.4);
     }
 
     .logo-badge-exact::before {
@@ -128,14 +126,14 @@
       position: absolute;
       inset: 3px;
       border-radius: 8px;
-      border: 1px solid var(--neon-pink);
+      border: 1px solid var(--neon-magenta);
     }
 
     .logo-check {
-      color: var(--neon-blue);
+      color: var(--neon-red);
       font-weight: 900;
       font-size: 1.1rem;
-      text-shadow: 0 0 8px var(--neon-blue);
+      text-shadow: 0 0 8px var(--neon-red);
       z-index: 2;
     }
 
@@ -143,10 +141,10 @@
       font-weight: 900;
       font-size: 1.25rem;
       letter-spacing: 1.5px;
-      background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
+      background: linear-gradient(135deg, var(--neon-red), var(--neon-magenta), var(--neon-blue));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 0 10px rgba(255, 0, 160, 0.5));
+      filter: drop-shadow(0 0 10px rgba(255, 0, 51, 0.5));
     }
 
     .view {
@@ -161,42 +159,36 @@
       display: block;
     }
 
-    /* Slogan Hyperlinks */
-    .slogan-nav {
+    /* The Three Pillars Nav Framework */
+    .pillars-nav {
       display: flex;
-      gap: 8px;
+      justify-content: space-between;
       align-items: center;
-      margin-bottom: 12px;
+      background: rgba(15, 21, 38, 0.85);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
       font-weight: 900;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
+      font-size: 0.78rem;
+      letter-spacing: 0.8px;
     }
 
-    .slogan-link {
-      text-decoration: none;
+    .pillar-link {
       cursor: pointer;
+      text-decoration: none;
       transition: transform 0.2s ease, filter 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
 
-    .slogan-link:hover {
-      transform: scale(1.05);
-      filter: brightness(1.3);
-    }
+    .pillar-link:hover { transform: scale(1.05); filter: brightness(1.2); }
+    .pillar-city { color: var(--neon-red); text-shadow: 0 0 8px rgba(255, 0, 51, 0.6); }
+    .pillar-style { color: var(--text-white); text-shadow: 0 0 8px rgba(255, 255, 255, 0.4); }
+    .pillar-booked { color: var(--neon-blue); text-shadow: 0 0 8px rgba(0, 240, 255, 0.6); }
 
-    .slogan-city { color: var(--neon-red); text-shadow: 0 0 8px rgba(255, 0, 51, 0.6); }
-    .slogan-vibe { color: var(--neon-yellow); text-shadow: 0 0 8px rgba(255, 230, 0, 0.6); }
-    .slogan-booked { color: var(--neon-blue); text-shadow: 0 0 8px rgba(0, 240, 255, 0.6); }
-
-    /* Hero Banner */
-    .hero-banner {
-      background: linear-gradient(135deg, rgba(255,0,51,0.2), rgba(0,240,255,0.15), rgba(255,0,160,0.25));
-      border: 1px solid var(--world-border);
-      border-radius: 20px;
-      padding: 16px;
-      margin-bottom: 16px;
-      box-shadow: var(--world-glow);
-    }
-
+    /* Buttons */
     .btn-primary {
       width: 100%;
       padding: 14px;
@@ -211,141 +203,139 @@
       box-shadow: var(--brand-glow);
       transition: transform 0.2s ease;
     }
-
     .btn-primary:active { transform: scale(0.97); }
     .btn-world { background: var(--world-gradient); box-shadow: var(--world-glow); }
 
-    /* Vertical Category List (Food First) */
-    .category-list-vertical {
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(255,0,51,0.2), rgba(0,240,255,0.15), rgba(255,0,160,0.25));
+      border: 1px solid var(--world-border);
+      border-radius: 20px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: var(--world-glow);
+    }
+
+    /* Category Worlds (Food #1 Rule) */
+    .category-world-list {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       margin: 12px 0 20px;
     }
 
-    .category-row-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    .world-card-large {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 12px 16px;
+      border-radius: 18px;
+      padding: 16px;
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
-    .category-row-item:active { transform: scale(0.98); }
+    .world-card-large:active { transform: scale(0.98); }
+    .world-card-large.food-featured {
+      border: 2px solid var(--neon-red);
+      background: linear-gradient(135deg, rgba(255,0,51,0.12), var(--card-bg) 70%);
+      box-shadow: 0 0 20px rgba(255, 0, 51, 0.25);
+    }
+    .world-card-large[data-cat="pink"] { border-color: rgba(255, 0, 160, 0.4); }
+    .world-card-large[data-cat="blue"] { border-color: rgba(0, 240, 255, 0.4); }
+    .world-card-large[data-cat="purple"] { border-color: rgba(128, 0, 255, 0.4); }
 
-    .row-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+    .world-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .world-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
-      background: rgba(255, 255, 255, 0.05);
+      font-size: 1.5rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
-    .category-row-item[data-cat="yellow"] { border-color: rgba(255, 230, 0, 0.4); }
-    .category-row-item[data-cat="yellow"] .row-icon { border: 1px solid var(--neon-yellow); background: rgba(255, 230, 0, 0.1); }
-
-    .category-row-item[data-cat="pink"] { border-color: rgba(255, 0, 160, 0.4); }
-    .category-row-item[data-cat="pink"] .row-icon { border: 1px solid var(--neon-pink); background: rgba(255, 0, 160, 0.1); }
-
-    .category-row-item[data-cat="blue"] { border-color: rgba(0, 240, 255, 0.4); }
-    .category-row-item[data-cat="blue"] .row-icon { border: 1px solid var(--neon-blue); background: rgba(0, 240, 255, 0.1); }
-
-    .category-row-item[data-cat="purple"] { border-color: rgba(128, 0, 255, 0.4); }
-    .category-row-item[data-cat="purple"] .row-icon { border: 1px solid var(--neon-purple); background: rgba(128, 0, 255, 0.1); }
-
-    /* Flash Deals */
-    .flash-banner {
-      background: linear-gradient(135deg, rgba(255, 0, 51, 0.25), rgba(128, 0, 255, 0.2));
-      border: 1px solid var(--neon-red);
-      border-radius: 16px;
-      padding: 14px;
-      margin-bottom: 16px;
-      box-shadow: 0 0 15px rgba(255, 0, 51, 0.3);
-    }
-
-    /* 2-Column Photo Grid */
-    .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 8px;
-    }
-
-    .grid-card {
+    /* Business / Specialist Cards */
+    .business-card {
       background: var(--card-bg);
       border: 1px solid var(--world-border);
-      border-radius: 16px;
+      border-radius: 18px;
       overflow: hidden;
+      margin-bottom: 14px;
       box-shadow: var(--world-glow);
-      cursor: pointer;
-      transition: transform 0.2s ease;
+    }
+
+    .business-card-img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .business-card-body {
+      padding: 14px;
       display: flex;
       flex-direction: column;
+      gap: 6px;
     }
 
-    .grid-card:active { transform: scale(0.97); }
-
-    .grid-card-img {
-      width: 100%;
-      height: 100px;
-      object-fit: cover;
-      border-bottom: 1px solid var(--card-border);
+    .service-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 6px 0;
     }
 
-    .grid-card-body { padding: 10px; display: flex; flex-direction: column; gap: 4px; }
-    .grid-card-title { font-size: 0.8rem; font-weight: 800; color: var(--text-white); }
-    .grid-card-sub { font-size: 0.68rem; color: var(--text-muted); }
-    .grid-card-price { font-size: 0.72rem; font-weight: 800; color: var(--world-primary); margin-top: 2px; }
+    .service-badge {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 4px 8px;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+    }
 
-    /* Specialists Styles */
-    .specialist-card {
+    /* Profile Dashboard Containers */
+    .dashboard-container {
       background: var(--card-bg);
       border: 1px solid var(--world-border);
-      border-radius: 16px;
-      padding: 14px;
-      margin-bottom: 12px;
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 14px;
       box-shadow: var(--world-glow);
     }
 
-    .specialist-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-    .specialist-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--neon-blue); }
-    .specialist-info h4 { font-size: 0.9rem; color: var(--text-white); font-weight: 800; }
-    .specialist-info p { font-size: 0.7rem; color: var(--text-muted); }
+    .profile-tile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
 
-    .service-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
-    .service-tag {
-      background: rgba(255, 255, 255, 0.06);
+    .profile-tile {
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 5px 10px;
-      font-size: 0.68rem;
-      color: var(--text-white);
+      border-radius: 14px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
       cursor: pointer;
+      transition: border-color 0.2s ease;
     }
-    .service-tag.selected { background: var(--world-gradient); border-color: var(--neon-pink); font-weight: 800; }
+    .profile-tile:hover { border-color: var(--world-primary); }
 
-    .time-slot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px; }
-    .slot-btn {
-      background: rgba(15, 21, 38, 0.9);
-      border: 1px solid var(--neon-blue);
-      color: var(--neon-blue);
-      padding: 8px 4px;
-      border-radius: 10px;
-      font-size: 0.72rem;
-      font-weight: 800;
-      cursor: pointer;
-      text-align: center;
-    }
-    .slot-btn:hover { background: var(--neon-blue); color: #000; }
-
-    /* Floating Chatbot Launcher & Vibe Pill */
+    /* Floating Chatbot Launcher */
     .chat-launcher-wrapper {
       position: absolute;
       bottom: 72px;
@@ -357,18 +347,17 @@
     }
 
     .chat-vibe-pill {
-      background: rgba(15, 21, 38, 0.9);
+      background: rgba(15, 21, 38, 0.92);
       backdrop-filter: blur(8px);
-      border: 1px solid var(--neon-blue);
-      color: var(--neon-blue);
+      border: 1px solid var(--neon-red);
+      color: var(--neon-red);
       font-size: 0.65rem;
       font-weight: 900;
       letter-spacing: 0.8px;
       padding: 6px 12px;
       border-radius: 20px;
-      box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+      box-shadow: 0 0 12px rgba(255, 0, 51, 0.4);
       cursor: pointer;
-      animation: pulse-glow 2.5s infinite ease-in-out;
     }
 
     .chat-launcher {
@@ -386,19 +375,14 @@
       justify-content: center;
     }
 
-    @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 8px rgba(0, 240, 255, 0.3); border-color: var(--neon-blue); }
-      50% { box-shadow: 0 0 16px rgba(255, 0, 160, 0.6); border-color: var(--neon-pink); color: var(--neon-pink); }
-    }
-
     .chat-modal {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      height: 65%;
+      height: 70%;
       background: #090d1a;
-      border-top: 2px solid var(--neon-blue);
+      border-top: 2px solid var(--neon-red);
       border-radius: 24px 24px 0 0;
       z-index: 100;
       display: none;
@@ -409,10 +393,10 @@
     .chat-modal.open { display: flex; }
 
     .chat-messages { flex: 1; overflow-y: auto; padding: 12px 0; display: flex; flex-direction: column; gap: 10px; }
-    .chat-bubble { max-width: 80%; padding: 10px 14px; border-radius: 14px; font-size: 0.8rem; line-height: 1.4; }
-    .chat-bubble.bot { background: rgba(0, 240, 255, 0.12); border: 1px solid var(--neon-blue); color: #fff; align-self: flex-start; }
+    .chat-bubble { max-width: 85%; padding: 10px 14px; border-radius: 14px; font-size: 0.8rem; line-height: 1.4; }
+    .chat-bubble.bot { background: rgba(255, 0, 51, 0.12); border: 1px solid var(--neon-red); color: #fff; align-self: flex-start; }
 
-    /* Bottom Navigation */
+    /* Bottom Navigation Bar */
     .bottom-nav {
       position: absolute;
       bottom: 0;
@@ -452,201 +436,389 @@
         </div>
         <span class="brand-title">BOOK'D</span>
       </div>
-      <span style="font-size: 1.2rem; cursor: pointer;" onclick="showView('profileView')">👤</span>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 1.1rem; cursor: pointer;" onclick="alert('No new notifications')">🔔</span>
+        <span style="font-size: 1.2rem; cursor: pointer;" onclick="showView('profileView')">👤</span>
+      </div>
     </header>
 
-    <!-- VIEW 1: HOME -->
+    <!-- VIEW 1: CUSTOMER HOME -->
     <main id="homeView" class="view active">
       
-      <!-- Color-Blocked Slogan Hyperlinks -->
-      <nav class="slogan-nav">
-        <a class="slogan-link slogan-city" onclick="showView('resultsView')">YOUR CITY.</a> 
-        <a class="slogan-link slogan-vibe" onclick="showView('profileView')">YOUR VIBE.</a> 
-        <a class="slogan-link slogan-booked" onclick="showView('bookingView')">GET BOOK'D.</a>
+      <!-- The Three Pillars Nav Framework -->
+      <nav class="pillars-nav">
+        <a class="pillar-link pillar-city" onclick="showView('exploreView')">🔴 YOUR CITY.</a>
+        <a class="pillar-link pillar-style" onclick="showView('profileView')">⚪ YOUR STYLE.</a>
+        <a class="pillar-link pillar-booked" onclick="showView('bookingView')">🔵 GET BOOK'D.</a>
       </nav>
 
-      <!-- Hero Banner -->
+      <!-- User Greeting & Location -->
+      <div style="margin-bottom: 14px;">
+        <h2 style="font-size: 1.15rem; font-weight: 900;">Good Morning, Maya 👑</h2>
+        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">📍 <span style="color: var(--neon-red); font-weight: 700; cursor: pointer;" onclick="alert('Location picker: Chicago, IL')">Chicago, IL</span> • Real-Time Urban Marketplace</p>
+      </div>
+
+      <!-- Global Search -->
+      <div style="position: relative; margin-bottom: 16px;">
+        <input type="text" placeholder="Search businesses, services, categories..." style="width: 100%; padding: 12px 14px 12px 38px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; color: #fff; font-size: 0.8rem;" />
+        <span style="position: absolute; left: 14px; top: 13px; font-size: 0.9rem;">🔍</span>
+      </div>
+
+      <!-- Hero Marketing Banner -->
       <div class="hero-banner">
-        <span style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: var(--neon-yellow); font-weight: 800;">
-          Skip the Line • Own Your Schedule
+        <span style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: var(--neon-red); font-weight: 800;">
+          Self Care is a Hustle
         </span>
-        <h2 style="font-size: 1.1rem; margin: 4px 0;">Get Book'd Today</h2>
-        <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px;">Lock in top dining, salons, barbers & wellness specialists with real-time slots.</p>
-        <button class="btn-primary btn-world" onclick="showView('resultsView')">Explore Live Specialists →</button>
+        <h2 style="font-size: 1.1rem; margin: 4px 0;">BOOK • RELAX • REPEAT</h2>
+        <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px;">Lock in top dining, salons, barbers & wellness specialists with instant QR passes.</p>
+        <button class="btn-primary btn-world" onclick="showView('exploreView')">Explore City Discoveries →</button>
       </div>
 
-      <!-- Flash Sale Banner -->
-      <div class="flash-banner">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-          <strong style="font-size: 0.8rem; color: var(--neon-yellow);">⚡ Flash Deal — Last-Minute Openings</strong>
-          <span id="flashCountdown" style="font-size: 0.7rem; font-weight: 900; color: var(--neon-red);">00:45:20</span>
-        </div>
-        <p style="font-size: 0.7rem; color: var(--text-muted);">20% off all open slots booked within the next hour.</p>
-      </div>
-
-      <!-- Food-First Stacked Category List -->
-      <h3 style="font-size: 0.9rem; margin-bottom: 6px;">Select Category World</h3>
+      <!-- Category Worlds (Food #1 Rule) -->
+      <h3 style="font-size: 0.9rem; margin-bottom: 8px;">YOUR STYLE — Category Worlds</h3>
       
-      <div class="category-list-vertical">
-        <div class="category-row-item" data-cat="yellow" onclick="enterCategoryWorld('yellow', 'Food & Dining')">
-          <div class="row-icon">🍔</div>
-          <div>
-            <h4 style="font-size: 0.85rem; color: var(--text-white);">Food & Drinks</h4>
-            <p style="font-size: 0.68rem; color: var(--text-muted);">VIP Dining, Lounges & Nightlife</p>
+      <div class="category-world-list">
+        <!-- 1. FOOD & DINING (#1 Priority) -->
+        <div class="world-card-large food-featured" data-cat="red" onclick="enterCategoryWorld('red', 'Food & Dining')">
+          <div class="world-card-header">
+            <div class="world-icon-box" style="border-color: var(--neon-red); color: var(--neon-red);">🍽️</div>
+            <div>
+              <span style="font-size: 0.65rem; color: var(--neon-red); font-weight: 900; letter-spacing: 0.5px;">01 • TOP PRIORITY WORLD</span>
+              <h4 style="font-size: 0.95rem; color: #fff; font-weight: 900;">Food & Dining</h4>
+            </div>
           </div>
+          <p style="font-size: 0.72rem; color: var(--text-muted);">Restaurants, Lounges, Fine Dining & Takeout</p>
+          <div style="font-size: 0.72rem; font-weight: 800; color: var(--neon-red); margin-top: 4px;">EXPLORE CUISINES →</div>
         </div>
 
-        <div class="category-row-item" data-cat="pink" onclick="enterCategoryWorld('pink', 'Salons & Lashes')">
-          <div class="row-icon">💅</div>
-          <div>
-            <h4 style="font-size: 0.85rem; color: var(--text-white);">Salons & Lashes</h4>
-            <p style="font-size: 0.68rem; color: var(--text-muted);">Beauty, Nails & Lash Studios</p>
+        <!-- 2. HAIR & BEAUTY -->
+        <div class="world-card-large" data-cat="pink" onclick="enterCategoryWorld('pink', 'Hair & Beauty')">
+          <div class="world-card-header">
+            <div class="world-icon-box" style="border-color: var(--neon-magenta); color: var(--neon-magenta);">✂️</div>
+            <div>
+              <span style="font-size: 0.65rem; color: var(--text-muted); font-weight: 700;">02 • SALONS & STUDIOS</span>
+              <h4 style="font-size: 0.95rem; color: #fff; font-weight: 900;">Hair & Beauty</h4>
+            </div>
           </div>
+          <p style="font-size: 0.72rem; color: var(--text-muted);">Haircuts, Color, Styling, Extensions & Lashes</p>
+          <div style="font-size: 0.72rem; font-weight: 800; color: var(--neon-magenta); margin-top: 4px;">EXPLORE SALONS →</div>
         </div>
 
-        <div class="category-row-item" data-cat="blue" onclick="enterCategoryWorld('blue', 'Barbers & Grooming')">
-          <div class="row-icon">💈</div>
-          <div>
-            <h4 style="font-size: 0.85rem; color: var(--text-white);">Barbers & Grooming</h4>
-            <p style="font-size: 0.68rem; color: var(--text-muted);">Fresh Fades, Lineups & Beard Sculpt</p>
+        <!-- 3. BARBERS & GROOMING -->
+        <div class="world-card-large" data-cat="blue" onclick="enterCategoryWorld('blue', 'Barbers & Grooming')">
+          <div class="world-card-header">
+            <div class="world-icon-box" style="border-color: var(--neon-blue); color: var(--neon-blue);">💈</div>
+            <div>
+              <span style="font-size: 0.65rem; color: var(--text-muted); font-weight: 700;">03 • FADES & CUTS</span>
+              <h4 style="font-size: 0.95rem; color: #fff; font-weight: 900;">Barbers</h4>
+            </div>
           </div>
+          <p style="font-size: 0.72rem; color: var(--text-muted);">Fresh Fades, Lineups, Beard Sculpting & Locs</p>
+          <div style="font-size: 0.72rem; font-weight: 800; color: var(--neon-blue); margin-top: 4px;">EXPLORE BARBERS →</div>
         </div>
 
-        <div class="category-row-item" data-cat="purple" onclick="enterCategoryWorld('purple', 'Spa & Wellness')">
-          <div class="row-icon">🧘</div>
-          <div>
-            <h4 style="font-size: 0.85rem; color: var(--text-white);">Spa & Wellness</h4>
-            <p style="font-size: 0.68rem; color: var(--text-muted);">Massages, Skincare & Relaxation</p>
+        <!-- 4. SPA & WELLNESS -->
+        <div class="world-card-large" data-cat="purple" onclick="enterCategoryWorld('purple', 'Spa & Wellness')">
+          <div class="world-card-header">
+            <div class="world-icon-box" style="border-color: var(--neon-purple); color: var(--neon-purple);">🧘</div>
+            <div>
+              <span style="font-size: 0.65rem; color: var(--text-muted); font-weight: 700;">04 • RELAXATION</span>
+              <h4 style="font-size: 0.95rem; color: #fff; font-weight: 900;">Spa & Wellness</h4>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <!-- 2-Column Photo Grid -->
-      <h3 style="font-size: 0.9rem; margin: 16px 0 6px;">Featured Spots</h3>
-      <div class="featured-grid">
-        <div class="grid-card" onclick="enterCategoryWorld('pink', 'Salons & Lashes')">
-          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=400&q=80" alt="Studio" class="grid-card-img" />
-          <div class="grid-card-body">
-            <div class="grid-card-title">The Luxe Studio</div>
-            <div class="grid-card-sub">Beauty & Salons • ⭐ 4.9</div>
-            <div class="grid-card-price">From $45</div>
-          </div>
-        </div>
-
-        <div class="grid-card" onclick="enterCategoryWorld('blue', 'Barbers & Grooming')">
-          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80" alt="Barbershop" class="grid-card-img" />
-          <div class="grid-card-body">
-            <div class="grid-card-title">Kings & Fades</div>
-            <div class="grid-card-sub">Barbers • ⭐ 4.8</div>
-            <div class="grid-card-price" style="color: var(--neon-blue);">From $35</div>
-          </div>
+          <p style="font-size: 0.72rem; color: var(--text-muted);">Massages, Facials, Skincare & Recovery</p>
+          <div style="font-size: 0.72rem; font-weight: 800; color: var(--neon-purple); margin-top: 4px;">EXPLORE SPA →</div>
         </div>
       </div>
 
     </main>
 
-    <!-- VIEW 2: SPECIALISTS & SERVICES (EXPLORE/CITY) -->
-    <main id="resultsView" class="view">
-      <div style="margin-bottom: 12px;">
-        <h2 id="categoryTitle" style="font-size: 1.1rem; margin-bottom: 2px;">City Specialists</h2>
-        <p style="font-size: 0.72rem; color: var(--text-muted);">Choose your urban professional and secure a real-time slot:</p>
-      </div>
-
-      <!-- Specialist 1: Tony Tuesday -->
-      <div class="specialist-card">
-        <div class="specialist-header">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Tony Tuesday" class="specialist-avatar" />
-          <div class="specialist-info">
-            <h4>Tony Tuesday 💈</h4>
-            <p>Master Barber • ⭐ 4.9 (128 reviews)</p>
-          </div>
-        </div>
-        <div class="service-list">
-          <div class="service-tag selected">Fresh Fade ($35)</div>
-          <div class="service-tag">Beard Sculpt ($20)</div>
-          <div class="service-tag">Lineup ($15)</div>
-        </div>
-        <div class="time-slot-grid">
-          <button class="slot-btn" onclick="confirmBooking('Tony Tuesday', 'Fresh Fade', '6:00 PM')">6:00 PM</button>
-          <button class="slot-btn" onclick="confirmBooking('Tony Tuesday', 'Fresh Fade', '7:00 PM')">7:00 PM</button>
-          <button class="slot-btn" onclick="confirmBooking('Tony Tuesday', 'Fresh Fade', '8:00 PM')">8:00 PM</button>
+    <!-- VIEW 2: EXPLORE / CITY RESULTS -->
+    <main id="exploreView" class="view">
+      <div style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <h2 id="exploreTitle" style="font-size: 1.1rem; font-weight: 900;">🔴 YOUR CITY. — Discover</h2>
+          <p style="font-size: 0.72rem; color: var(--text-muted);">Trending businesses and providers around Chicago, IL:</p>
         </div>
       </div>
 
-      <!-- Specialist 2: Dreddy Kane -->
-      <div class="specialist-card">
-        <div class="specialist-header">
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Dreddy Kane" class="specialist-avatar" style="border-color: var(--neon-purple);" />
-          <div class="specialist-info">
-            <h4>Dreddy Kane 👑</h4>
-            <p>Loc & Braid Specialist • ⭐ 5.0 (94 reviews)</p>
+      <!-- Detailed Business Card 1 -->
+      <div class="business-card" onclick="showView('businessProfileView')">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=500&q=80" alt="Luxe Hair Studio" class="business-card-img" />
+        <div class="business-card-body">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h4 style="font-size: 0.9rem; font-weight: 900;">The Luxe Hair Studio</h4>
+            <span style="font-size: 0.7rem; color: var(--neon-red); font-weight: 800;">⭐ 4.8 (312)</span>
           </div>
-        </div>
-        <div class="service-list">
-          <div class="service-tag selected">Dread Retwist ($85)</div>
-          <div class="service-tag">Two-Strand Twists ($75)</div>
-          <div class="service-tag">Starter Locs ($120)</div>
-        </div>
-        <div class="time-slot-grid">
-          <button class="slot-btn" onclick="confirmBooking('Dreddy Kane', 'Dread Retwist', '4:30 PM')">4:30 PM</button>
-          <button class="slot-btn" onclick="confirmBooking('Dreddy Kane', 'Dread Retwist', '6:30 PM')">6:30 PM</button>
-          <button class="slot-btn" onclick="confirmBooking('Dreddy Kane', 'Dread Retwist', '8:30 PM')">8:30 PM</button>
+          <p style="font-size: 0.7rem; color: var(--text-muted);">📍 0.7 mi • Brooklyn / Chicago Hub</p>
+          <div class="service-tag-row">
+            <span class="service-badge">Haircuts</span>
+            <span class="service-badge">Color</span>
+            <span class="service-badge">Styling</span>
+            <span class="service-badge">Extensions</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+            <span style="font-size: 0.75rem; font-weight: 900; color: var(--world-primary);">From $45</span>
+            <button class="btn-primary" style="width: auto; padding: 6px 14px; font-size: 0.75rem;" onclick="event.stopPropagation(); showView('bookingFlowView')">BOOK NOW →</button>
+          </div>
         </div>
       </div>
 
-      <!-- Specialist 3: Kiki Luxe -->
-      <div class="specialist-card">
-        <div class="specialist-header">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Kiki Luxe" class="specialist-avatar" style="border-color: var(--neon-pink);" />
-          <div class="specialist-info">
-            <h4>Kiki Luxe ✨</h4>
-            <p>Lash & Tech Artist • ⭐ 4.9 (210 reviews)</p>
+      <!-- Detailed Business Card 2 -->
+      <div class="business-card" onclick="showView('businessProfileView')">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80" alt="Kings & Fades" class="business-card-img" />
+        <div class="business-card-body">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h4 style="font-size: 0.9rem; font-weight: 900;">Kings & Fades Barbershop</h4>
+            <span style="font-size: 0.7rem; color: var(--neon-red); font-weight: 800;">⭐ 4.9 (184)</span>
           </div>
-        </div>
-        <div class="service-list">
-          <div class="service-tag selected">Volume Lash Set ($90)</div>
-          <div class="service-tag">Gel Full Set ($60)</div>
-          <div class="service-tag">Nail Art Add-on ($25)</div>
-        </div>
-        <div class="time-slot-grid">
-          <button class="slot-btn" onclick="confirmBooking('Kiki Luxe', 'Volume Lash Set', '5:00 PM')">5:00 PM</button>
-          <button class="slot-btn" onclick="confirmBooking('Kiki Luxe', 'Volume Lash Set', '7:15 PM')">7:15 PM</button>
+          <p style="font-size: 0.7rem; color: var(--text-muted);">📍 1.2 mi • Master Tony Tuesday</p>
+          <div class="service-tag-row">
+            <span class="service-badge">Fresh Fade</span>
+            <span class="service-badge">Beard Sculpt</span>
+            <span class="service-badge">Line Up</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+            <span style="font-size: 0.75rem; font-weight: 900; color: var(--neon-blue);">From $35</span>
+            <button class="btn-primary" style="width: auto; padding: 6px 14px; font-size: 0.75rem;" onclick="event.stopPropagation(); showView('bookingFlowView')">BOOK NOW →</button>
+          </div>
         </div>
       </div>
     </main>
 
-    <!-- VIEW 3: PROFILE / YOUR VIBE -->
-    <main id="profileView" class="view">
-      <h2 style="font-size: 1.1rem; margin-bottom: 6px;">Your Vibe & Profile</h2>
-      <p style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 16px;">Customize your preferred atmosphere and notification settings.</p>
-
-      <div style="background: var(--card-bg); padding: 16px; border-radius: 16px; border: 1px solid var(--world-border); margin-bottom: 14px;">
-        <h4 style="font-size: 0.85rem; margin-bottom: 4px;">Active City Vibe</h4>
-        <p style="font-size: 0.7rem; color: var(--text-muted);">Chicago, IL • Default World: Food & Dining</p>
+    <!-- VIEW 3: BUSINESS PROFILE & PRICING -->
+    <main id="businessProfileView" class="view">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+        <span style="cursor: pointer; font-size: 1.1rem;" onclick="showView('exploreView')">← Back</span>
+        <h2 style="font-size: 1rem; font-weight: 900;">Studio Profile</h2>
       </div>
 
-      <button class="btn-primary" onclick="showView('homeView')">Save & Return Home</button>
+      <div class="dashboard-container" style="padding: 12px;">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=500&q=80" alt="Studio" style="width: 100%; height: 160px; border-radius: 12px; object-fit: cover; margin-bottom: 10px;" />
+        <h3 style="font-size: 1rem; font-weight: 900;">The Luxe Hair Studio</h3>
+        <p style="font-size: 0.72rem; color: var(--text-muted);">⭐ 4.8 (312 reviews) • 0.7 mi • Chicago, IL</p>
+        <p style="font-size: 0.72rem; color: var(--text-white); margin-top: 8px; line-height: 1.4;">Luxury hair care in a modern, stylish environment. Our talented stylists are here to bring your vision to life.</p>
+      </div>
+
+      <h3 style="font-size: 0.9rem; margin-bottom: 8px;">Services & Pricing</h3>
+      
+      <div class="dashboard-container" style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--card-border); padding-bottom: 8px;">
+          <div>
+            <h4 style="font-size: 0.85rem; font-weight: 800;">Women's Haircut</h4>
+            <p style="font-size: 0.68rem; color: var(--text-muted);">45 min • Includes wash & style</p>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-size: 0.8rem; font-weight: 900; color: var(--neon-red); display: block;">$45</span>
+            <button class="btn-primary" style="width: auto; padding: 4px 10px; font-size: 0.68rem; margin-top: 4px;" onclick="showView('bookingFlowView')">Book</button>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--card-border); padding-bottom: 8px;">
+          <div>
+            <h4 style="font-size: 0.85rem; font-weight: 800;">Color (Single Process)</h4>
+            <p style="font-size: 0.68rem; color: var(--text-muted);">1 hr 30 min</p>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-size: 0.8rem; font-weight: 900; color: var(--neon-red); display: block;">$85</span>
+            <button class="btn-primary" style="width: auto; padding: 4px 10px; font-size: 0.68rem; margin-top: 4px;" onclick="showView('bookingFlowView')">Book</button>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <h4 style="font-size: 0.85rem; font-weight: 800;">Balayage</h4>
+            <p style="font-size: 0.68rem; color: var(--text-muted);">2 hrs</p>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-size: 0.8rem; font-weight: 900; color: var(--neon-red); display: block;">$150</span>
+            <button class="btn-primary" style="width: auto; padding: 4px 10px; font-size: 0.68rem; margin-top: 4px;" onclick="showView('bookingFlowView')">Book</button>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <!-- VIEW 4: BOOKINGS & QR PASS -->
-    <main id="bookingView" class="view">
-      <h2 style="font-size: 1.1rem; margin-bottom: 6px;">Your Booked Pass</h2>
-      <p style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 14px;">Present your digital QR pass upon arrival:</p>
+    <!-- VIEW 4: BOOKING WORKFLOW (DATE & TIME) -->
+    <main id="bookingFlowView" class="view">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+        <span style="cursor: pointer; font-size: 1.1rem;" onclick="showView('exploreView')">← Back</span>
+        <h2 style="font-size: 1rem; font-weight: 900;">🔵 GET BOOK'D. — Schedule</h2>
+      </div>
 
-      <div id="passContainer" style="background: var(--card-bg); padding: 20px; border-radius: 20px; border: 1px solid var(--world-border); text-align: center; box-shadow: var(--world-glow);">
-        <div style="font-size: 2.2rem; margin-bottom: 8px;">👑</div>
-        <h4 id="passSpecialist" style="font-size: 1rem; margin-bottom: 4px;">Tony Tuesday 💈</h4>
-        <p id="passService" style="font-size: 0.75rem; color: var(--world-primary); font-weight: 800; margin-bottom: 12px;">Fresh Fade • 7:00 PM</p>
+      <div class="dashboard-container">
+        <h4 style="font-size: 0.85rem; font-weight: 800; margin-bottom: 4px;">Selected Service</h4>
+        <p style="font-size: 0.75rem; color: var(--neon-red); font-weight: 800;">Women's Haircut • $45 (45 min)</p>
+        <p style="font-size: 0.7rem; color: var(--text-muted);">The Luxe Hair Studio, Chicago IL</p>
+      </div>
+
+      <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Choose a Date</h4>
+      <div style="display: flex; gap: 6px; overflow-x: auto; margin-bottom: 14px; padding-bottom: 4px;">
+        <div style="background: var(--neon-red); color: #fff; padding: 8px 12px; border-radius: 10px; text-align: center; min-width: 65px; cursor: pointer;">
+          <span style="font-size: 0.6rem; display: block;">TUE</span>
+          <span style="font-size: 0.85rem; font-weight: 900;">Apr 22</span>
+        </div>
+        <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 8px 12px; border-radius: 10px; text-align: center; min-width: 65px; cursor: pointer;">
+          <span style="font-size: 0.6rem; display: block; color: var(--text-muted);">WED</span>
+          <span style="font-size: 0.85rem; font-weight: 900;">Apr 23</span>
+        </div>
+        <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 8px 12px; border-radius: 10px; text-align: center; min-width: 65px; cursor: pointer;">
+          <span style="font-size: 0.6rem; display: block; color: var(--text-muted);">THU</span>
+          <span style="font-size: 0.85rem; font-weight: 900;">Apr 24</span>
+        </div>
+        <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 8px 12px; border-radius: 10px; text-align: center; min-width: 65px; cursor: pointer;">
+          <span style="font-size: 0.6rem; display: block; color: var(--text-muted);">FRI</span>
+          <span style="font-size: 0.85rem; font-weight: 900;">Apr 25</span>
+        </div>
+      </div>
+
+      <h4 style="font-size: 0.85rem; margin-bottom: 6px;">Available Times Today</h4>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px;">
+        <button class="btn-primary" style="padding: 8px; font-size: 0.75rem; background: rgba(15,21,38,0.9); border: 1px solid var(--neon-blue); color: var(--neon-blue);" onclick="confirmFinalBooking('The Luxe Hair Studio', 'Women\'s Haircut', '7:00 PM')">7:00 PM</button>
+        <button class="btn-primary" style="padding: 8px; font-size: 0.75rem; background: rgba(15,21,38,0.9); border: 1px solid var(--neon-blue); color: var(--neon-blue);" onclick="confirmFinalBooking('The Luxe Hair Studio', 'Women\'s Haircut', '8:15 PM')">8:15 PM</button>
+        <button class="btn-primary" style="padding: 8px; font-size: 0.75rem; background: rgba(15,21,38,0.9); border: 1px solid var(--neon-blue); color: var(--neon-blue);" onclick="confirmFinalBooking('The Luxe Hair Studio', 'Women\'s Haircut', '9:00 PM')">9:00 PM</button>
+      </div>
+
+      <button class="btn-primary" onclick="confirmFinalBooking('The Luxe Hair Studio', 'Women\'s Haircut', '7:00 PM')">Confirm & Secure Booking →</button>
+    </main>
+
+    <!-- VIEW 5: BOOKING CONFIRMATION & QR PASS -->
+    <main id="confirmationView" class="view" style="text-align: center;">
+      <div style="font-size: 2.2rem; margin-bottom: 4px;">🎉</div>
+      <h2 style="font-size: 1.2rem; font-weight: 900; color: var(--neon-red);">You're Booked!</h2>
+      <p style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 14px;">Your appointment has been successfully confirmed.</p>
+
+      <div class="dashboard-container" style="text-align: left;">
+        <h4 id="passStudio" style="font-size: 0.9rem; font-weight: 900;">The Luxe Hair Studio</h4>
+        <p style="font-size: 0.7rem; color: var(--text-muted);">Chicago, IL</p>
+        <hr style="border: 0; border-top: 1px solid var(--card-border); margin: 8px 0;" />
+        <p id="passServiceDetail" style="font-size: 0.75rem; font-weight: 800; color: var(--neon-red);">Women's Haircut • $45</p>
+        <p style="font-size: 0.72rem; color: var(--text-white);">📅 Tue, Apr 22, 2026 • 7:00 PM</p>
         
-        <!-- Generated QR Code Mockup -->
-        <div style="background: #fff; padding: 12px; border-radius: 12px; display: inline-block; margin-bottom: 12px;">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=BOOKD-VIP-PASS-777" alt="QR Pass" style="display: block;" />
+        <!-- Scannable QR Pass -->
+        <div style="text-align: center; margin-top: 14px;">
+          <div style="background: #fff; padding: 10px; border-radius: 12px; display: inline-block;">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=BOOKD-VIP-PASS-998" alt="QR Pass" style="display: block;" />
+          </div>
+          <p style="font-size: 0.62rem; color: var(--text-muted); margin-top: 4px;">Pass ID: #BK-998-CYBER</p>
         </div>
-        <p style="font-size: 0.65rem; color: var(--text-muted);">Pass ID: #BK-8842-CYBER</p>
+      </div>
+
+      <button class="btn-primary btn-world" style="margin-bottom: 8px;" onclick="showView('myBookingsView')">View My Bookings</button>
+      <button class="btn-primary" style="background: rgba(255,255,255,0.08); border: 1px solid var(--card-border);" onclick="alert('Added to your calendar successfully!')">📅 Add to Calendar</button>
+    </main>
+
+    <!-- VIEW 6: MY BOOKINGS -->
+    <main id="myBookingsView" class="view">
+      <h2 style="font-size: 1.1rem; font-weight: 900; margin-bottom: 4px;">My Bookings & History</h2>
+      <p style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 14px;">Manage upcoming slots or check past visits.</p>
+
+      <div class="dashboard-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+          <span style="font-size: 0.65rem; color: var(--neon-red); font-weight: 900;">ACTIVE RESERVATION</span>
+          <span style="font-size: 0.68rem; color: var(--text-muted);">Apr 22, 2026</span>
+        </div>
+        <h4 style="font-size: 0.9rem; font-weight: 900;">The Luxe Hair Studio</h4>
+        <p style="font-size: 0.72rem; color: var(--text-muted);">Women's Haircut • 7:00 PM ($45)</p>
+        <div style="display: flex; gap: 8px; margin-top: 12px;">
+          <button class="btn-primary" style="padding: 6px; font-size: 0.72rem;" onclick="showView('confirmationView')">View Pass</button>
+          <button class="btn-primary" style="padding: 6px; font-size: 0.72rem; background: rgba(255,0,51,0.2); border: 1px solid var(--neon-red);" onclick="alert('Booking rescheduled')">Reschedule</button>
+        </div>
       </div>
     </main>
 
-    <!-- AI Chatbot Launcher with Vibe Pill -->
+    <!-- VIEW 7: PROFILE & YOUR STYLE DASHBOARD -->
+    <main id="profileView" class="view">
+      
+      <!-- User Profile Header -->
+      <div class="dashboard-container" style="display: flex; align-items: center; gap: 14px;">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Maya Johnson" style="width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--neon-red); object-fit: cover;" />
+        <div>
+          <h3 style="font-size: 1rem; font-weight: 900;">Maya Johnson</h3>
+          <span style="font-size: 0.68rem; color: var(--neon-red); font-weight: 800; background: rgba(255,0,51,0.15); padding: 2px 8px; border-radius: 10px; display: inline-block; margin-top: 2px;">👑 Premium Member</span>
+        </div>
+      </div>
+
+      <!-- ACCOUNT OVERVIEW TILES -->
+      <h3 style="font-size: 0.9rem; margin-bottom: 8px;">⚪ YOUR STYLE — Account Overview</h3>
+      
+      <div class="profile-tile-grid">
+        <div class="profile-tile" onclick="showView('myBookingsView')">
+          <span style="font-size: 1.2rem;">📅</span>
+          <h4 style="font-size: 0.8rem; font-weight: 800;">Bookings</h4>
+          <span style="font-size: 0.65rem; color: var(--text-muted);">Upcoming & History</span>
+        </div>
+
+        <div class="profile-tile" onclick="alert('Opening My Rewards Dashboard...')">
+          <span style="font-size: 1.2rem;">🎁</span>
+          <h4 style="font-size: 0.8rem; font-weight: 800;">1,250 Pts</h4>
+          <span style="font-size: 0.65rem; color: var(--neon-red);">Rewards Active</span>
+        </div>
+
+        <div class="profile-tile" onclick="alert('Opening Saved Favorites...')">
+          <span style="font-size: 1.2rem;">❤️</span>
+          <h4 style="font-size: 0.8rem; font-weight: 800;">Favorites</h4>
+          <span style="font-size: 0.65rem; color: var(--text-muted);">Saved places & pros</span>
+        </div>
+
+        <div class="profile-tile" onclick="alert('Opening Reviews & Ratings...')">
+          <span style="font-size: 1.2rem;">⭐</span>
+          <h4 style="font-size: 0.8rem; font-weight: 800;">Reviews</h4>
+          <span style="font-size: 0.65rem; color: var(--text-muted);">Your feedback history</span>
+        </div>
+      </div>
+
+      <!-- REWARDS CONTAINER -->
+      <div class="dashboard-container" style="margin-top: 14px; border-color: var(--neon-red);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+          <h4 style="font-size: 0.85rem; font-weight: 900; color: var(--neon-red);">🎁 MY REWARDS</h4>
+          <span style="font-size: 0.75rem; font-weight: 900;">1,250 PTS</span>
+        </div>
+        <p style="font-size: 0.7rem; color: var(--text-muted); margin-bottom: 8px;">750 points until your next VIP reward unlock.</p>
+        <div style="background: rgba(255,255,255,0.06); height: 6px; border-radius: 4px; overflow: hidden; margin-bottom: 10px;">
+          <div style="background: var(--neon-red); width: 62%; height: 100%;"></div>
+        </div>
+        <button class="btn-primary" style="padding: 8px; font-size: 0.72rem;" onclick="alert('Viewing Reward Catalog...')">View Rewards Catalog →</button>
+      </div>
+
+      <!-- SEPARATED FINANCIAL CONTAINERS -->
+      <h3 style="font-size: 0.9rem; margin: 16px 0 8px;">Financials</h3>
+
+      <div class="dashboard-container">
+        <h4 style="font-size: 0.85rem; font-weight: 900; margin-bottom: 8px;">💳 SAVED PAYMENTS</h4>
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; padding: 6px 0; border-bottom: 1px solid var(--card-border);">
+          <span>Visa •••• 4242</span>
+          <span style="color: var(--neon-red); font-weight: 800;">✓ Default</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; padding: 6px 0;">
+          <span>Mastercard •••• 8821</span>
+          <span style="color: var(--text-muted);">Select</span>
+        </div>
+        <button class="btn-primary" style="margin-top: 10px; padding: 8px; font-size: 0.72rem; background: rgba(255,255,255,0.08); border: 1px solid var(--card-border);" onclick="alert('Add payment modal opened')">+ Add Payment Method</button>
+      </div>
+
+      <div class="dashboard-container">
+        <h4 style="font-size: 0.85rem; font-weight: 900; margin-bottom: 8px;">📜 PAYMENT HISTORY</h4>
+        <div style="font-size: 0.72rem; display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--card-border);">
+          <span>The Luxe Hair Studio (Women's Haircut)</span>
+          <span style="font-weight: 800; color: var(--neon-red);">-$45.00</span>
+        </div>
+        <div style="font-size: 0.72rem; display: flex; justify-content: space-between; padding: 6px 0;">
+          <span>Kings & Fades Barbershop (Fade)</span>
+          <span style="font-weight: 800; color: var(--neon-red);">-$35.00</span>
+        </div>
+      </div>
+
+      <!-- SUPPORT & SETTINGS LIST -->
+      <div class="dashboard-container" style="display: flex; flex-direction: column; gap: 8px; font-size: 0.8rem;">
+        <div style="cursor: pointer; padding: 4px 0;" onclick="alert('Personal Info settings')">👤 Personal Information</div>
+        <div style="cursor: pointer; padding: 4px 0;" onclick="alert('Notification preferences')">🔔 Notifications & Reminders</div>
+        <div style="cursor: pointer; padding: 4px 0;" onclick="alert('Help center opened')">🎧 Help & Support Center</div>
+        <div style="cursor: pointer; padding: 4px 0; color: var(--neon-red);" onclick="showView('homeView')">🔒 Log Out</div>
+      </div>
+
+    </main>
+
+    <!-- Floating Chatbot Launcher & Vibe Pill -->
     <div class="chat-launcher-wrapper">
       <div class="chat-vibe-pill" onclick="toggleChat()">CLICK TO VIBE ✨</div>
       <button class="chat-launcher" onclick="toggleChat()">💬</button>
@@ -658,23 +830,28 @@
         <div style="display: flex; align-items: center; gap: 8px;">
           <div class="logo-badge-exact" style="width: 26px; height: 26px;"><span class="logo-check" style="font-size: 0.8rem;">✓</span></div>
           <div>
-            <strong style="font-size: 0.85rem; display: block; line-height: 1.1;">BOOK'D AI Bot</strong>
-            <span style="font-size: 0.62rem; color: var(--neon-blue);">Online • City Navigator</span>
+            <strong style="font-size: 0.85rem; display: block; line-height: 1.1;">BOOK'D Vibe AI</strong>
+            <span style="font-size: 0.62rem; color: var(--neon-red);">Online • City Concierge</span>
           </div>
         </div>
         <span style="cursor: pointer; font-size: 1.2rem; padding: 4px;" onclick="toggleChat()">✕</span>
       </div>
       <div class="chat-messages" id="chatMessages">
         <div class="chat-bubble bot">
-          Yo! What’s the move today? I can help you find open slots, matched vibes, or lock down a booking with Tony Tuesday or Kiki Luxe anywhere in your city. ⚡
+          Yo! Welcome to BOOK'D. What’s the move today? Tap any quick prompt below or tell me what you need:
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
+          <span style="background: rgba(255,0,51,0.15); border: 1px solid var(--neon-red); border-radius: 12px; padding: 4px 8px; font-size: 0.68rem; cursor: pointer;" onclick="sendQuickPrompt('Find me food')">🍽️ Find me food</span>
+          <span style="background: rgba(0,240,255,0.15); border: 1px solid var(--neon-blue); border-radius: 12px; padding: 4px 8px; font-size: 0.68rem; cursor: pointer;" onclick="sendQuickPrompt('Find a barber')">💈 Find a barber</span>
+          <span style="background: rgba(255,0,160,0.15); border: 1px solid var(--neon-magenta); border-radius: 12px; padding: 4px 8px; font-size: 0.68rem; cursor: pointer;" onclick="sendQuickPrompt('Show my rewards')">🎁 Show my rewards</span>
         </div>
       </div>
     </div>
 
-    <!-- Bottom Navigation -->
+    <!-- Bottom Navigation Bar -->
     <nav class="bottom-nav">
       <div class="nav-item active" onclick="showView('homeView')"><span>🏠</span><span>Home</span></div>
-      <div class="nav-item" onclick="showView('resultsView')"><span>🔍</span><span>Explore</span></div>
+      <div class="nav-item" onclick="showView('exploreView')"><span>🔍</span><span>Explore</span></div>
       <div class="nav-item" onclick="showView('bookingView')"><span>📅</span><span>Bookings</span></div>
       <div class="nav-item" onclick="showView('profileView')"><span>👤</span><span>Profile</span></div>
     </nav>
@@ -688,26 +865,35 @@
 
       document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
       if(viewId === 'homeView') document.querySelectorAll('.nav-item')[0].classList.add('active');
-      if(viewId === 'resultsView') document.querySelectorAll('.nav-item')[1].classList.add('active');
-      if(viewId === 'bookingView') document.querySelectorAll('.nav-item')[2].classList.add('active');
+      if(viewId === 'exploreView') document.querySelectorAll('.nav-item')[1].classList.add('active');
+      if(viewId === 'bookingView' || viewId === 'myBookingsView') document.querySelectorAll('.nav-item')[2].classList.add('active');
       if(viewId === 'profileView') document.querySelectorAll('.nav-item')[3].classList.add('active');
     }
 
     function enterCategoryWorld(catName, titleText) {
       document.documentElement.setAttribute('data-world', catName);
-      document.getElementById('categoryTitle').innerText = titleText;
-      showView('resultsView');
+      document.getElementById('exploreTitle').innerText = '🔴 YOUR CITY. — ' + titleText;
+      showView('exploreView');
     }
 
-    function confirmBooking(specialist, service, time) {
-      document.getElementById('passSpecialist').innerText = specialist;
-      document.getElementById('passService').innerText = service + ' • ' + time;
-      showView('bookingView');
+    function confirmFinalBooking(studio, service, time) {
+      document.getElementById('passStudio').innerText = studio;
+      document.getElementById('passServiceDetail').innerText = service + ' • $45';
+      showView('confirmationView');
     }
 
     function toggleChat() {
       const modal = document.getElementById('chatModal');
       modal.classList.toggle('open');
+    }
+
+    function sendQuickPrompt(promptText) {
+      const container = document.getElementById('chatMessages');
+      container.innerHTML += `<div style="background: rgba(255,255,255,0.1); padding: 8px 12px; border-radius: 10px; font-size: 0.78rem; align-self: flex-end; margin: 4px 0;">${promptText}</div>`;
+      setTimeout(() => {
+        container.innerHTML += `<div class="chat-bubble bot">I've filtered the top results for "${promptText}" across Chicago. Check out the explore tab for active slots! ⚡</div>`;
+        container.scrollTop = container.scrollHeight;
+      }, 500);
     }
   </script>
 </body>

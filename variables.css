@@ -1,174 +1,126 @@
 :root {
   /* =====================================================
-     BOOKED CORE
+     BOOKED CORE (MIAMI NIGHTLIFE PALETTE)
      ===================================================== */
-
-  --booked-cyan: #00e5ff;
-  --booked-blue: #168cff;
+  --booked-cyan: #00f0ff;
+  --booked-pink: #ff00a0;
   --booked-purple: #8b5cf6;
-  --booked-pink: #ff2bd6;
+  --booked-magenta: #d900ff;
 
-  --booked-cyan-glow: rgba(0, 229, 255, .35);
-  --booked-purple-glow: rgba(139, 92, 246, .35);
-  --booked-cyan-soft: rgba(0, 229, 255, .12);
-
+  --booked-cyan-glow: rgba(0, 240, 255, 0.45);
+  --booked-pink-glow: rgba(255, 0, 160, 0.45);
+  --booked-purple-glow: rgba(139, 92, 246, 0.35);
 
   /* =====================================================
-     DARK UI
+     DARK UI & GLASSMORPHISM
      ===================================================== */
-
-  --navy-950: #050611;
-  --navy-900: #080b1c;
-  --navy-800: #10152b;
-  --navy-700: #17203d;
+  --navy-950: #05050d;
+  --navy-900: #0a0814;
+  --navy-800: #120f24;
+  --navy-700: #1a1633;
 
   --white: #ffffff;
-  --muted: #aab4c8;
+  --muted: #a0a6c0;
 
-  --line: rgba(255,255,255,.18);
-  --glass: rgba(7,12,30,.78);
+  --line: rgba(255, 255, 255, 0.12);
+  --glass: rgba(10, 8, 20, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.15);
 
-  --success: #6dffb1;
-  --danger: #ff6b86;
-
+  --success: #00ffaa;
+  --danger: #ff3366;
 
   /* =====================================================
-     CATEGORY — DEFAULT
+     CATEGORY ACCENTS (INDIVIDUAL COLOR IDENTITIES)
      ===================================================== */
-
+  /* Default */
   --category-accent: var(--booked-cyan);
-  --category-secondary: var(--booked-purple);
+  --category-secondary: var(--booked-pink);
   --category-glow: var(--booked-cyan-glow);
-  --category-accent-soft: var(--booked-cyan-soft);
 
-
-  /* =====================================================
-     CATEGORY — BARBERS
-     ===================================================== */
-
+  /* Barber Shops */
   --barbers-accent: #ff1744;
-  --barbers-secondary: #ff4569;
-  --barbers-glow: rgba(255,23,68,.42);
+  --barbers-secondary: #ff5252;
+  --barbers-glow: rgba(255, 23, 68, 0.42);
 
+  /* Nail Salons / Beauty */
+  --nail-accent: #ff00a0;
+  --nail-secondary: #ff60c8;
+  --nail-glow: rgba(255, 0, 160, 0.42);
 
-  /* =====================================================
-     CATEGORY — BEAUTY
-     ===================================================== */
-
-  --beauty-accent: #ff2bd6;
-  --beauty-secondary: #ff70e8;
-  --beauty-glow: rgba(255,43,214,.42);
-
-
-  /* =====================================================
-     CATEGORY — RESTAURANTS
-     ===================================================== */
-
+  /* Restaurants */
   --restaurants-accent: #ff6a00;
-  --restaurants-secondary: #ff9d42;
-  --restaurants-glow: rgba(255,106,0,.42);
+  --restaurants-secondary: #ff9a00;
+  --restaurants-glow: rgba(255, 106, 0, 0.42);
 
+  /* Fitness */
+  --fitness-accent: #00ff88;
+  --fitness-secondary: #00e5ff;
+  --fitness-glow: rgba(0, 255, 136, 0.42);
 
-  /* =====================================================
-     CATEGORY — FITNESS
-     ===================================================== */
+  /* Spa & Wellness */
+  --wellness-accent: #00e5d4;
+  --wellness-secondary: #00f0ff;
+  --wellness-glow: rgba(0, 229, 212, 0.42);
 
-  --fitness-accent: #39ff88;
-  --fitness-secondary: #72ffad;
-  --fitness-glow: rgba(57,255,136,.42);
-
-
-  /* =====================================================
-     CATEGORY — ENTERTAINMENT
-     ===================================================== */
-
+  /* Entertainment */
   --entertainment-accent: #a855ff;
   --entertainment-secondary: #d06cff;
-  --entertainment-glow: rgba(168,85,255,.42);
+  --entertainment-glow: rgba(168, 85, 255, 0.42);
 
-
-  /* =====================================================
-     CATEGORY — WELLNESS
-     ===================================================== */
-
-  --wellness-accent: #00e5d4;
-  --wellness-secondary: #54fff2;
-  --wellness-glow: rgba(0,229,212,.42);
-
+  /* Shopping */
+  --shopping-accent: #ffaa00;
+  --shopping-secondary: #ffd000;
+  --shopping-glow: rgba(255, 170, 0, 0.42);
 
   /* =====================================================
-     CATEGORY — ANIMAL
+     UI GEOMETRY
      ===================================================== */
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
 
-  --animal-accent: #00a8ff;
-  --animal-secondary: #5bc7ff;
-  --animal-glow: rgba(0,168,255,.42);
-
-
-  /* =====================================================
-     UI
-     ===================================================== */
-
-  --radius-lg: 28px;
-  --radius-md: 18px;
-
-  --shadow:
-    0 24px 80px rgba(0,0,0,.42);
+  --shadow-neon: 0 0 20px var(--booked-cyan-glow), 0 0 40px var(--booked-pink-glow);
+  --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.6);
 }
-/* CATEGORY THEMES */
 
+/* CATEGORY THEME CLASSES */
 .theme-default {
   --category-accent: var(--booked-cyan);
-  --category-secondary: var(--booked-purple);
+  --category-secondary: var(--booked-pink);
   --category-glow: var(--booked-cyan-glow);
-  --category-accent-soft: var(--booked-cyan-soft);
 }
-
 .theme-barbers {
   --category-accent: var(--barbers-accent);
   --category-secondary: var(--barbers-secondary);
   --category-glow: var(--barbers-glow);
-  --category-accent-soft: rgba(255, 23, 68, .12);
 }
-
-.theme-beauty {
-  --category-accent: var(--beauty-accent);
-  --category-secondary: var(--beauty-secondary);
-  --category-glow: var(--beauty-glow);
-  --category-accent-soft: rgba(255, 43, 214, .12);
+.theme-nail {
+  --category-accent: var(--nail-accent);
+  --category-secondary: var(--nail-secondary);
+  --category-glow: var(--nail-glow);
 }
-
 .theme-restaurants {
   --category-accent: var(--restaurants-accent);
   --category-secondary: var(--restaurants-secondary);
   --category-glow: var(--restaurants-glow);
-  --category-accent-soft: rgba(255, 106, 0, .12);
 }
-
 .theme-fitness {
   --category-accent: var(--fitness-accent);
   --category-secondary: var(--fitness-secondary);
   --category-glow: var(--fitness-glow);
-  --category-accent-soft: rgba(57, 255, 136, .12);
 }
-
-.theme-entertainment {
-  --category-accent: var(--entertainment-accent);
-  --category-secondary: var(--entertainment-secondary);
-  --category-glow: var(--entertainment-glow);
-  --category-accent-soft: rgba(168, 85, 255, .12);
-}
-
 .theme-wellness {
   --category-accent: var(--wellness-accent);
   --category-secondary: var(--wellness-secondary);
   --category-glow: var(--wellness-glow);
-  --category-accent-soft: rgba(0, 229, 212, .12);
 }
-
-.theme-animal {
-  --category-accent: var(--animal-accent);
-  --category-secondary: var(--animal-secondary);
-  --category-glow: var(--animal-glow);
-  --category-accent-soft: rgba(0, 168, 255, .12);
+.theme-entertainment {
+  --category-accent: var(--entertainment-accent);
+  --category-secondary: var(--entertainment-secondary);
+  --category-glow: var(--entertainment-glow);
+}
+.theme-shopping {
+  --category-accent: var(--shopping-accent);
+  --category-secondary: var(--shopping-secondary);
+  --category-glow: var(--shopping-glow);
 }

@@ -1,17 +1,22 @@
 /* SECTION HEADINGS */
 .section-title {
-  font-size: 1.25rem;
-  margin: 24px 20px 16px;
+  font-size: 1.15rem;
+  margin: 24px 20px 14px;
   color: var(--white);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
+.section-header {
+  display: flex;
+  align-items: center;
+}
+
 /* CATEGORY GRID & CARDS */
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
   padding: 0 20px;
 }
 
@@ -20,19 +25,19 @@
   background: var(--navy-900);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  padding: 20px 16px;
+  padding: 18px 14px;
   cursor: pointer;
   transition: transform 0.2s ease, border-color 0.2s ease;
   overflow: hidden;
 }
 
 .category-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   border-color: var(--category-accent);
 }
 
 .category-card h3 {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--category-accent);
   margin-bottom: 4px;
 }
@@ -42,7 +47,7 @@
   color: var(--muted);
 }
 
-/* COMING SOON CARDS */
+/* COMING SOON BADGES */
 .category-card.coming-soon {
   opacity: 0.55;
   cursor: not-allowed;
@@ -51,17 +56,70 @@
 
 .badge-coming-soon {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   background: var(--booked-pink);
   color: var(--white);
   font-size: 0.55rem;
   font-weight: 800;
-  padding: 3px 6px;
+  padding: 2px 5px;
   border-radius: 4px;
 }
 
-/* BOTTOM NAVIGATION BAR */
+/* FLASH OFFERS & CONCIERGE */
+.flash-section, .concierge-section, .rewards-hero, .bookings-section, .favorites-section, .profile-section {
+  padding: 0 20px;
+}
+
+.flash-grid, .concierge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.flash-card, .concierge-card {
+  background: linear-gradient(135deg, rgba(255, 0, 160, 0.12), rgba(0, 240, 255, 0.12));
+  border: 1px solid var(--booked-pink);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  position: relative;
+}
+
+.flash-tag {
+  background: var(--booked-pink);
+  color: var(--white);
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 4px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.badge-live {
+  background: var(--success);
+  color: var(--navy-950);
+  font-size: 0.6rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.btn-action {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  background: var(--booked-cyan);
+  color: var(--navy-950);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* BOTTOM NAVIGATION */
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -93,4 +151,218 @@
 .nav-icon {
   font-size: 1.2rem;
   margin-bottom: 2px;
+}
+
+/* VIEW SWITCHING */
+.app-view.hidden {
+  display: none !important;
+}
+
+.app-view.active {
+  display: block;
+}
+
+/* AI CONCIERGE CHAT WIDGET STYLES */
+.ai-chat-widget {
+  position: fixed;
+  bottom: 75px;
+  right: 20px;
+  z-index: 999;
+}
+
+.chat-toggle-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--booked-pink), var(--booked-cyan));
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 0 20px var(--booked-pink-glow);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.chat-toggle-btn:hover {
+  transform: scale(1.08);
+}
+
+.chat-pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--booked-cyan);
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+.chat-drawer {
+  position: fixed;
+  bottom: 85px;
+  right: 20px;
+  width: calc(100vw - 40px);
+  max-width: 360px;
+  height: 480px;
+  background: var(--navy-900);
+  border: 1px solid var(--booked-cyan);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.8), 0 0 25px var(--booked-cyan-glow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+}
+
+.chat-header {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-avatar {
+  font-size: 1.4rem;
+}
+
+.chat-header h3 {
+  font-size: 0.9rem;
+  color: var(--white);
+}
+
+.online-status {
+  font-size: 0.65rem;
+  color: var(--success);
+}
+
+.chat-close-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 14px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  display: flex;
+  max-width: 88%;
+}
+
+.ai-message {
+  align-self: flex-start;
+}
+
+.user-message {
+  align-self: flex-end;
+}
+
+.msg-bubble {
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.ai-message .msg-bubble {
+  background: var(--navy-800);
+  border: 1px solid var(--line);
+  color: var(--white);
+}
+
+.user-message .msg-bubble {
+  background: linear-gradient(135deg, var(--booked-pink), var(--booked-purple));
+  color: var(--white);
+  border-bottom-right-radius: 2px;
+}
+
+.chat-action-card {
+  margin-top: 8px;
+  background: var(--navy-950);
+  border: 1px solid var(--booked-cyan);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+}
+
+.chat-action-card h4 {
+  color: var(--booked-cyan);
+  font-size: 0.8rem;
+}
+
+.chat-action-card p {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin: 2px 0 6px;
+}
+
+.chat-suggestions {
+  display: flex;
+  gap: 6px;
+  padding: 8px 10px;
+  overflow-x: auto;
+  border-top: 1px solid var(--line);
+}
+
+.chip-btn {
+  white-space: nowrap;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid var(--booked-cyan);
+  color: var(--booked-cyan);
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 0.68rem;
+  cursor: pointer;
+}
+
+.chat-input-area {
+  display: flex;
+  padding: 8px 10px;
+  gap: 6px;
+  background: var(--navy-950);
+  border-top: 1px solid var(--line);
+}
+
+.chat-input-area input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  color: var(--white);
+  font-size: 0.8rem;
+  outline: none;
+}
+
+.btn-glow-sm {
+  background: var(--booked-cyan);
+  color: var(--navy-950);
+  border: none;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.75rem;
 }

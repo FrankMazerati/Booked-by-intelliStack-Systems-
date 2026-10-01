@@ -115,3 +115,60 @@
   --shadow:
     0 24px 80px rgba(0,0,0,.42);
 }
+/* CATEGORY THEMES */
+
+.theme-default {
+  --category-accent: var(--booked-cyan);
+  --category-secondary: var(--booked-purple);
+  --category-glow: var(--booked-cyan-glow);
+  --category-accent-soft: var(--booked-cyan-soft);
+}
+
+.theme-barbers {
+  --category-accent: var(--barbers-accent);
+  --category-secondary: var(--barbers-secondary);
+  --category-glow: var(--barbers-glow);
+  --category-accent-soft: rgba(255, 23, 68, .12);
+}
+
+.theme-beauty {
+  --category-accent: var(--beauty-accent);
+  --category-secondary: var(--beauty-secondary);
+  --category-glow: var(--beauty-glow);
+  --category-accent-soft: rgba(255, 43, 214, .12);
+}
+
+.theme-restaurants {
+  --category-accent: var(--restaurants-accent);
+  --category-secondary: var(--restaurants-secondary);
+  --category-glow: var(--restaurants-glow);
+  --category-accent-soft: rgba(255, 106, 0, .12);
+}
+
+.theme-fitness {
+  --category-accent: var(--fitness-accent);
+  --category-secondary: var(--fitness-secondary);
+  --category-glow: var(--fitness-glow);
+  --category-accent-soft: rgba(57, 255, 136, .12);
+}
+
+.theme-entertainment {
+  --category-accent: var(--entertainment-accent);
+  --category-secondary: var(--entertainment-secondary);
+  --category-glow: var(--entertainment-glow);
+  --category-accent-soft: rgba(168, 85, 255, .12);
+}
+
+.theme-wellness {
+  --category-accent: var(--wellness-accent);
+  --category-secondary: var(--wellness-secondary);
+  --category-glow: var(--wellness-glow);
+  --category-accent-soft: rgba(0, 229, 212, .12);
+}
+
+.theme-animal {
+  --category-accent: var(--animal-accent);
+  --category-secondary: var(--animal-secondary);
+  --category-glow: var(--animal-glow);
+  --category-accent-soft: rgba(0, 168, 255, .12);
+}

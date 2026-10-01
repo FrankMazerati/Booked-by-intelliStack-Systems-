@@ -1,19 +1,117 @@
 :root {
-  --navy-950: #020914;
-  --navy-900: #061426;
-  --navy-800: #0b1d32;
-  --navy-700: #102a44;
-  --yellow: #ffe500;
-  --pink: #ff00b8;
-  --pink-2: #ff3bd4;
-  --cyan: #00e5ff;
+  /* =====================================================
+     BOOKED CORE
+     ===================================================== */
+
+  --booked-cyan: #00e5ff;
+  --booked-blue: #168cff;
+  --booked-purple: #8b5cf6;
+  --booked-pink: #ff2bd6;
+
+  --booked-cyan-glow: rgba(0, 229, 255, .35);
+  --booked-purple-glow: rgba(139, 92, 246, .35);
+  --booked-cyan-soft: rgba(0, 229, 255, .12);
+
+
+  /* =====================================================
+     DARK UI
+     ===================================================== */
+
+  --navy-950: #050611;
+  --navy-900: #080b1c;
+  --navy-800: #10152b;
+  --navy-700: #17203d;
+
   --white: #ffffff;
-  --muted: #aab7c8;
-  --line: rgba(255,255,255,.20);
-  --glass: rgba(5,18,35,.76);
+  --muted: #aab4c8;
+
+  --line: rgba(255,255,255,.18);
+  --glass: rgba(7,12,30,.78);
+
   --success: #6dffb1;
   --danger: #ff6b86;
+
+
+  /* =====================================================
+     CATEGORY — DEFAULT
+     ===================================================== */
+
+  --category-accent: var(--booked-cyan);
+  --category-secondary: var(--booked-purple);
+  --category-glow: var(--booked-cyan-glow);
+  --category-accent-soft: var(--booked-cyan-soft);
+
+
+  /* =====================================================
+     CATEGORY — BARBERS
+     ===================================================== */
+
+  --barbers-accent: #ff1744;
+  --barbers-secondary: #ff4569;
+  --barbers-glow: rgba(255,23,68,.42);
+
+
+  /* =====================================================
+     CATEGORY — BEAUTY
+     ===================================================== */
+
+  --beauty-accent: #ff2bd6;
+  --beauty-secondary: #ff70e8;
+  --beauty-glow: rgba(255,43,214,.42);
+
+
+  /* =====================================================
+     CATEGORY — RESTAURANTS
+     ===================================================== */
+
+  --restaurants-accent: #ff6a00;
+  --restaurants-secondary: #ff9d42;
+  --restaurants-glow: rgba(255,106,0,.42);
+
+
+  /* =====================================================
+     CATEGORY — FITNESS
+     ===================================================== */
+
+  --fitness-accent: #39ff88;
+  --fitness-secondary: #72ffad;
+  --fitness-glow: rgba(57,255,136,.42);
+
+
+  /* =====================================================
+     CATEGORY — ENTERTAINMENT
+     ===================================================== */
+
+  --entertainment-accent: #a855ff;
+  --entertainment-secondary: #d06cff;
+  --entertainment-glow: rgba(168,85,255,.42);
+
+
+  /* =====================================================
+     CATEGORY — WELLNESS
+     ===================================================== */
+
+  --wellness-accent: #00e5d4;
+  --wellness-secondary: #54fff2;
+  --wellness-glow: rgba(0,229,212,.42);
+
+
+  /* =====================================================
+     CATEGORY — ANIMAL
+     ===================================================== */
+
+  --animal-accent: #00a8ff;
+  --animal-secondary: #5bc7ff;
+  --animal-glow: rgba(0,168,255,.42);
+
+
+  /* =====================================================
+     UI
+     ===================================================== */
+
   --radius-lg: 28px;
   --radius-md: 18px;
-  --shadow: 0 24px 80px rgba(0,0,0,.42);
+
+  --shadow:
+    0 24px 80px rgba(0,0,0,.42);
 }

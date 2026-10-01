@@ -1,29 +1,29 @@
-<!-- AI FLOATING CHAT LAUNCHER WITH VIBE ALERT -->
-<div class="chat-launcher-wrapper">
-  <div class="chat-vibe-pill" onclick="toggleChat()">
-    CLICK TO VIBE ✨
-  </div>
-  <button class="chat-launcher" onclick="toggleChat()">
-    💬
-  </button>
-</div>
+<!-- CATEGORY WORLDS (ORDERED STARTING WITH FOOD & DRINKS) -->
+<h3 style="font-size: 0.9rem; margin-top: 14px; margin-bottom: 4px;">Select Category World</h3>
+<p style="font-size: 0.7rem; color: var(--text-muted); margin-bottom: 10px;">Tap a world to filter and re-theme your environment:</p>
 
-<!-- EXPANDABLE CHAT MODAL -->
-<div id="chatModal" class="chat-modal">
-  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--card-border); padding-bottom: 10px;">
-    <div style="display: flex; align-items: center; gap: 8px;">
-      <div class="logo-badge" style="width: 24px; height: 24px; font-size: 0.7rem;">✓</div>
-      <div>
-        <strong style="font-size: 0.85rem; display: block; line-height: 1.1;">BOOK'D AI Bot</strong>
-        <span style="font-size: 0.65rem; color: var(--neon-blue);">Online • City Navigator</span>
-      </div>
-    </div>
-    <span style="cursor: pointer; font-size: 1.2rem; padding: 4px;" onclick="toggleChat()">✕</span>
+<div class="category-grid">
+  <!-- 1. FOOD & DRINKS (TOP PRIORITY) -->
+  <div class="category-chip" data-cat="yellow" onclick="enterCategoryWorld('yellow', 'Food & Dining')">
+    <div class="icon-avatar">🍔</div>
+    <span>Food & Drinks</span>
   </div>
 
-  <div class="chat-messages" id="chatMessages">
-    <div class="chat-bubble bot">
-      Yo! What’s the move today? I can help you find open slots, matched vibes, or lock down a booking anywhere in your city. ⚡
-    </div>
+  <!-- 2. SALONS & LASHES -->
+  <div class="category-chip" data-cat="pink" onclick="enterCategoryWorld('pink', 'Salons & Lashes')">
+    <div class="icon-avatar">💅</div>
+    <span>Salons</span>
+  </div>
+
+  <!-- 3. BARBERS & GROOMING -->
+  <div class="category-chip" data-cat="blue" onclick="enterCategoryWorld('blue', 'Barbers & Grooming')">
+    <div class="icon-avatar">💈</div>
+    <span>Barbers</span>
+  </div>
+
+  <!-- 4. SPA & WELLNESS -->
+  <div class="category-chip" data-cat="purple" onclick="enterCategoryWorld('purple', 'Spa & Wellness')">
+    <div class="icon-avatar">🧘</div>
+    <span>Spa</span>
   </div>
 </div>

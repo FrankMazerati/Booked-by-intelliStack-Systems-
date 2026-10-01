@@ -24,23 +24,4 @@
   <script type="module" src="./app.js"></script>
 </body>
 </html>
-<script>
-  fetch("./app.js")
-    .then(response => {
-      document.getElementById("app").innerHTML = `
-        <div style="padding:40px;font-family:Arial;background:white;color:black;min-height:100vh">
-          <h1>APP.JS FOUND</h1>
-          <p>Status: ${response.status}</p>
-          <p>File loaded: ${response.ok}</p>
-        </div>
-      `;
-    })
-    .catch(error => {
-      document.getElementById("app").innerHTML = `
-        <div style="padding:40px;font-family:Arial;background:white;color:red;min-height:100vh">
-          <h1>APP.JS NOT FOUND</h1>
-          <p>${error}</p>
-        </div>
-      `;
-    });
-</script>
+<script type="module" src="./app.js"></script>

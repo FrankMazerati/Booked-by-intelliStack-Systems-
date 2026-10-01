@@ -1,264 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-world="pink">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BOOK'D - Find It. Book It.</title>
-  
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>BOOK'D — Dynamic Worlds & AI Booking</title>
   <link rel="stylesheet" href="variables.css" />
-  <link rel="stylesheet" href="global.css" />
-  <link rel="stylesheet" href="components.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="theme-default">
+<body>
 
-  <!-- TOP HEADER -->
-  <header class="app-header">
-    <div class="logo-container">
-      <span class="logo-text">BOOK<span class="highlight">'D</span></span>
-      <span class="subtext">by IntelliStack</span>
-    </div>
-    <div class="header-actions">
-      <button class="btn-sign-up" id="btnSignUp">Sign Up</button>
-    </div>
-  </header>
-
-  <!-- MAIN APP CONTAINER -->
-  <main class="app-main" id="appMain">
-
-    <!-- VIEW 1: HOME SCREEN -->
-    <div id="view-home" class="app-view active">
-      
-      <!-- HERO BANNER -->
-      <section class="hero-section">
-        <div class="hero-bg">
-          <img src="Screenshot_20260930-193637.png" alt="BOOK'D Hero Atmosphere" class="hero-img" onerror="this.style.display='none'" />
-        </div>
-        <div class="hero-content">
-          <h1 class="hero-title">Your Time, <span class="neon-text">booked.</span></h1>
-          <p class="hero-subtitle">Discover the people and places that help you feel your best.</p>
-          
-          <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search services, salons, restaurants..." />
-            <button id="searchBtn" class="btn-glow">Search</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- FLASH OFFERS & BOOKED NOW -->
-      <section class="flash-section">
-        <div class="section-header">
-          <h2 class="section-title">⚡ FLASH OFFERS & BOOKED NOW</h2>
-          <span class="badge-live">LIVE DEALS</span>
-        </div>
-        <div class="flash-grid" id="flashGrid">
-          <div class="flash-card">
-            <span class="flash-tag">20% OFF</span>
-            <h3>South Beach Hair Lounge</h3>
-            <p>Flash Slot: Today @ 3:00 PM</p>
-            <button class="btn-action" onclick="bookItem('South Beach Hair Lounge')">Book Flash Slot</button>
-          </div>
-          <div class="flash-card">
-            <span class="flash-tag">FREE DRINK</span>
-            <h3>VIP Ocean Dining</h3>
-            <p>Prime Table: Tonight @ 8:00 PM</p>
-            <button class="btn-action" onclick="bookItem('VIP Ocean Dining')">Claim Offer</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- MARKETPLACE CATEGORIES -->
-      <section class="categories-section">
-        <h2 class="section-title">Explore Categories</h2>
-        <div class="categories-grid" id="categoriesGrid">
-          <div class="category-card theme-restaurants" data-category="restaurants">
-            <h3>Restaurants</h3>
-            <p>Dining & Nightlife</p>
-          </div>
-          <div class="category-card theme-barbers" data-category="barbers">
-            <h3>Barber Shops</h3>
-            <p>Cuts, Fades & Shaves</p>
-          </div>
-          <div class="category-card theme-nail" data-category="nails">
-            <h3>Nail Salons</h3>
-            <p>Manicures & Pedicures</p>
-          </div>
-          <div class="category-card theme-fitness" data-category="fitness">
-            <h3>Fitness</h3>
-            <p>Gyms & Training</p>
-          </div>
-          <div class="category-card theme-wellness" data-category="wellness">
-            <h3>Spa & Wellness</h3>
-            <p>Massages & Skincare</p>
-          </div>
-          <div class="category-card theme-entertainment" data-category="entertainment">
-            <h3>Entertainment</h3>
-            <p>Events & Access</p>
-          </div>
-          <div class="category-card theme-shopping" data-category="shopping">
-            <h3>Shopping</h3>
-            <p>Boutiques & Retail</p>
-          </div>
-
-          <!-- Coming Soon Badges -->
-          <div class="category-card coming-soon">
-            <span class="badge-coming-soon">COMING SOON</span>
-            <h3>Hotels & Suites</h3>
-            <p>Stays & Resorts</p>
-          </div>
-          <div class="category-card coming-soon">
-            <span class="badge-coming-soon">COMING SOON</span>
-            <h3>Travel & Flights</h3>
-            <p>Getaways & Flights</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONCIERGE & SPECIAL SERVICES -->
-      <section class="concierge-section">
-        <h2 class="section-title">Exclusive Experiences</h2>
-        <div class="concierge-grid">
-          <div class="concierge-card">
-            <h3>✨ Concierge Services</h3>
-            <p>Custom booking assistance & VIP host planning.</p>
-          </div>
-          <div class="concierge-card">
-            <h3>🎁 Gift Bookings</h3>
-            <p>Send appointment vouchers & experiences to friends.</p>
-          </div>
-          <div class="concierge-card">
-            <h3>👥 Group Bookings</h3>
-            <p>Reserve multi-guest experiences for parties & teams.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- FEATURED LISTINGS -->
-      <section class="listings-section">
-        <h2 class="section-title">Popular Near You</h2>
-        <div class="listings-grid" id="listingsGrid"></div>
-      </section>
-
-    </div>
-
-    <!-- VIEW 2: REWARDS VIEW -->
-    <div id="view-rewards" class="app-view hidden">
-      <section class="rewards-hero">
-        <h2>🎁 BOOK'D Rewards & Loyalty</h2>
-        <p>Earn points every time you book services and leave reviews.</p>
-        <div class="points-badge">Your Points: <span id="userPoints">450</span> PTS</div>
-      </section>
-    </div>
-
-    <!-- VIEW 3: BOOKINGS VIEW -->
-    <div id="view-bookings" class="app-view hidden">
-      <section class="bookings-section">
-        <h2>📅 My Bookings</h2>
-        <div id="activeBookings">
-          <p class="empty-state">No upcoming bookings. Discover services to book now!</p>
-        </div>
-      </section>
-    </div>
-
-    <!-- VIEW 4: FAVORITES VIEW -->
-    <div id="view-favorites" class="app-view hidden">
-      <section class="favorites-section">
-        <h2>❤️ Favorites & Saved</h2>
-        <div id="favoritesList">
-          <p class="empty-state">Your saved spots will appear here.</p>
-        </div>
-      </section>
-    </div>
-
-    <!-- VIEW 5: PROFILE VIEW -->
-    <div id="view-profile" class="app-view hidden">
-      <section class="profile-section">
-        <h2>👤 Account Settings</h2>
-        <p>Manage your account, payment options, and notifications.</p>
-      </section>
-    </div>
-
-  </main>
-
-  <!-- FLOATING AI CONCIERGE CHAT WIDGET -->
-  <div id="aiChatWidget" class="ai-chat-widget">
+  <div class="app-viewport">
     
-    <!-- Floating Launcher Button -->
-    <button id="chatToggleBtn" class="chat-toggle-btn" aria-label="Open AI Assistant">
-      <span class="chat-icon">✨</span>
-      <span class="chat-pulse"></span>
-    </button>
+    <!-- App Header (Blue & Purple Logo Permanently Anchored) -->
+    <header class="app-header">
+      <div style="display: flex; align-items: center;">
+        <div class="logo-badge">✓</div>
+        <span class="brand-title">BOOK'D</span>
+      </div>
+      <span style="font-size: 1.1rem; cursor: pointer;">🔔</span>
+    </header>
 
-    <!-- Chat Drawer Window -->
-    <div id="chatDrawer" class="chat-drawer hidden">
+    <!-- VIEW 1: HOME VIEW -->
+    <main id="homeView" class="view active">
+      <h2 style="font-size: 1.2rem; margin-bottom: 4px;">Explore Services</h2>
+      <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px;">
+        Tap a category to switch environment worlds.
+      </p>
+
+      <!-- Category Buttons Triggering Worlds -->
+      <div class="category-grid">
+        <div class="category-chip" data-cat="pink" onclick="switchWorld('pink', 'Salons & Lashes')">
+          <div class="icon-circle">💅</div>
+          <span>Salons</span>
+        </div>
+        <div class="category-chip" data-cat="blue" onclick="switchWorld('blue', 'Barbers & Grooming')">
+          <div class="icon-circle">💈</div>
+          <span>Barbers</span>
+        </div>
+        <div class="category-chip" data-cat="purple" onclick="switchWorld('purple', 'Spa & Wellness')">
+          <div class="icon-circle">🧘</div>
+          <span>Spa</span>
+        </div>
+        <div class="category-chip" data-cat="yellow" onclick="switchWorld('yellow', 'Food & Dining')">
+          <div class="icon-circle">🍔</div>
+          <span>Food</span>
+        </div>
+      </div>
+
+      <!-- Featured Services Section -->
+      <h3 style="font-size: 0.9rem; margin: 16px 0 8px;">Featured Places</h3>
+
+      <div class="business-card">
+        <img src="https://via.placeholder.com/60" alt="Salon" />
+        <div style="flex: 1;">
+          <h4 style="font-size: 0.85rem;">The Luxe Lash & Hair Studio</h4>
+          <p style="font-size: 0.7rem; color: var(--text-muted);">Beauty & Salons</p>
+          <span style="font-size: 0.75rem; color: var(--world-primary); font-weight: 700;">From $45</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- VIEW 2: CATEGORY RESULTS VIEW -->
+    <main id="resultsView" class="view">
+      <h2 id="categoryTitle" style="font-size: 1.2rem; margin-bottom: 12px;">Category World</h2>
       
-      <!-- Drawer Header -->
+      <div class="business-card">
+        <img src="https://via.placeholder.com/60" alt="Provider" />
+        <div style="flex: 1;">
+          <h4 style="font-size: 0.85rem;">Top Rated Venue</h4>
+          <p style="font-size: 0.7rem; color: var(--text-muted);">Open Today • 4.9 ★</p>
+          <button class="btn-primary" style="margin-top: 8px; padding: 8px;" onclick="showView('bookingView')">Book Now</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- VIEW 3: BOOKING VIEW -->
+    <main id="bookingView" class="view">
+      <h2 style="font-size: 1.2rem; margin-bottom: 8px;">Select Appointment</h2>
+      <div style="background: var(--card-bg); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--world-border);">
+        <p style="font-size: 0.8rem; font-weight: bold;">Choose Time Slot</p>
+        <button class="btn-primary" style="margin-top: 12px;" onclick="alert('Booking Confirmed!')">Confirm Appointment</button>
+      </div>
+    </main>
+
+    <!-- AI Assistant Floating Button -->
+    <button class="chat-launcher" onclick="toggleChat()">✨</button>
+
+    <!-- Integrated AI Assistant Panel -->
+    <div id="chatModal" class="chat-modal">
       <div class="chat-header">
-        <div class="chat-title-group">
-          <span class="chat-avatar">🤖</span>
-          <div>
-            <h3>BOOK'D AI Assistant</h3>
-            <span class="online-status">Online • Instant Recommendations</span>
-          </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div class="logo-badge" style="width: 24px; height: 24px; font-size: 0.7rem;">✓</div>
+          <strong style="font-size: 0.85rem;">BOOK'D Assistant</strong>
         </div>
-        <button id="chatCloseBtn" class="chat-close-btn">&times;</button>
+        <span style="cursor: pointer; font-size: 1.2rem;" onclick="toggleChat()">✕</span>
       </div>
-
-      <!-- Messages Container -->
-      <div id="chatMessages" class="chat-messages">
-        <div class="message ai-message">
-          <div class="msg-bubble">
-            Hey there! 👋 Looking for something specific today? Ask me what's open nearby, or try one of the quick prompts below!
-          </div>
-        </div>
+      <div class="chat-messages">
+        <div class="chat-bubble bot">Hi! What are you looking to book today?</div>
       </div>
-
-      <!-- Quick Suggestion Chips -->
-      <div class="chat-suggestions">
-        <button class="chip-btn" onclick="sendQuickPrompt('What\'s available around me today?')">What's available today?</button>
-        <button class="chip-btn" onclick="sendQuickPrompt('Top rated barber shops open now?')">Barber shops open now</button>
-        <button class="chip-btn" onclick="sendQuickPrompt('Dinner spots with openings tonight?')">Dinner openings tonight</button>
-      </div>
-
-      <!-- Input Area -->
-      <div class="chat-input-area">
-        <input type="text" id="chatInput" placeholder="Ask AI (e.g. 'Haircut at 4pm near me')..." />
-        <button id="chatSendBtn" class="btn-glow-sm">Send</button>
-      </div>
-
     </div>
+
+    <!-- Navigation Bar -->
+    <nav class="bottom-nav">
+      <div class="nav-item active" onclick="showView('homeView')"><span>🏠</span><span>Home</span></div>
+      <div class="nav-item" onclick="showView('resultsView')"><span>🔍</span><span>Explore</span></div>
+      <div class="nav-item" onclick="showView('bookingView')"><span>📅</span><span>Bookings</span></div>
+    </nav>
+
   </div>
 
-  <!-- ACCESSIBLE 6-TAB BOTTOM NAVIGATION -->
-  <nav class="bottom-nav">
-    <a href="#" class="nav-item active" data-target="home">
-      <span class="nav-icon">🏠</span>
-      <span class="nav-label">Home</span>
-    </a>
-    <a href="#" class="nav-item" data-target="search">
-      <span class="nav-icon">🔍</span>
-      <span class="nav-label">Search</span>
-    </a>
-    <a href="#" class="nav-item" data-target="bookings">
-      <span class="nav-icon">📅</span>
-      <span class="nav-label">Bookings</span>
-    </a>
-    <a href="#" class="nav-item" data-target="favorites">
-      <span class="nav-icon">❤️</span>
-      <span class="nav-label">Favorites</span>
-    </a>
-    <a href="#" class="nav-item" data-target="rewards">
-      <span class="nav-icon">🎁</span>
-      <span class="nav-label">Rewards</span>
-    </a>
-    <a href="#" class="nav-item" data-target="profile">
-      <span class="nav-icon">👤</span>
-      <span class="nav-label">Profile</span>
-    </a>
-  </nav>
-
-  <!-- SINGLE CONTROLLER JS -->
   <script src="app.js"></script>
 </body>
 </html>

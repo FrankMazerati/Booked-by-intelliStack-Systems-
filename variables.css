@@ -1,67 +1,20 @@
 :root {
-  /* Base Dark Palette */
-  --bg-dark: #070913;
-  --card-bg: #121829;
-  --card-border: rgba(255, 255, 255, 0.08);
-  --text-white: #ffffff;
-  --text-muted: #8d9bb0;
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-pill: 50px;
-
-  /* Raw Neon Palette */
-  --neon-pink: #ff00a0;
-  --neon-yellow: #ffe600;
-  --neon-blue: #00f0ff;
-  --neon-purple: #8000ff;
-
-  /* Fixed Brand Logo & AI Tokens */
-  --brand-gradient: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
-  --brand-glow: 0 0 18px rgba(0, 240, 255, 0.5), 0 0 25px rgba(128, 0, 255, 0.4);
-
-  /* Dynamic World Tokens (Default: Pink / Salons World) */
-  --world-primary: var(--neon-pink);
-  --world-secondary: var(--neon-yellow);
-  --world-gradient: linear-gradient(90deg, var(--neon-pink), var(--neon-yellow));
-  --world-border: rgba(255, 0, 160, 0.35);
-  --world-glow: 0 0 20px rgba(255, 0, 160, 0.35);
-}
-
-/* Category "World" Theme Overrides */
-
-/* 1. Salons, Beauty, Lashes (Pink World) */
-[data-world="pink"] {
-  --world-primary: var(--neon-pink);
-  --world-secondary: var(--neon-yellow);
-  --world-gradient: linear-gradient(90deg, var(--neon-pink), var(--neon-yellow));
-  --world-border: rgba(255, 0, 160, 0.35);
-  --world-glow: 0 0 20px rgba(255, 0, 160, 0.4);
-}
-
-/* 2. Barbers & Grooming (Blue World) */
-[data-world="blue"] {
-  --world-primary: var(--neon-blue);
-  --world-secondary: var(--neon-purple);
-  --world-gradient: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
-  --world-border: rgba(0, 240, 255, 0.35);
-  --world-glow: 0 0 20px rgba(0, 240, 255, 0.4);
-}
-
-/* 3. Spa & Wellness (Purple World) */
-[data-world="purple"] {
-  --world-primary: var(--neon-purple);
-  --world-secondary: var(--neon-pink);
-  --world-gradient: linear-gradient(90deg, var(--neon-purple), var(--neon-pink));
-  --world-border: rgba(128, 0, 255, 0.35);
-  --world-glow: 0 0 20px rgba(128, 0, 255, 0.4);
-}
-
-/* 4. Food & Dining (Yellow World) */
-[data-world="yellow"] {
-  --world-primary: var(--neon-yellow);
-  --world-secondary: var(--neon-blue);
-  --world-gradient: linear-gradient(90deg, var(--neon-yellow), var(--neon-blue));
-  --world-border: rgba(255, 230, 0, 0.35);
-  --world-glow: 0 0 20px rgba(255, 230, 0, 0.4);
+    --bg-dark: #06060B;
+    --bg-panel: #0d0d14;
+    --bg-input: rgba(26, 26, 36, 0.8);
+    --border-color: #1a1a24;
+    
+    --neon-pink: #d946ef;
+    --neon-blue: #00E5FF;
+    --neon-purple: #8b5cf6;
+    --neon-green: #00ff88;
+    
+    --text-main: #ffffff;
+    --text-muted: #888899;
+    --text-dark: #666677;
+    
+    --glow-pink: 0 0 15px rgba(217, 70, 239, 0.4);
+    --glow-blue: 0 0 15px rgba(0, 229, 255, 0.3);
+    
+    --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }

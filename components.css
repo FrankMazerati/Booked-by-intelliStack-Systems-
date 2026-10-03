@@ -45,13 +45,10 @@
     border: 1px solid rgba(0, 229, 255, 0.3);
     box-shadow: inset 0 0 10px rgba(0, 229, 255, 0.1);
     backdrop-filter: blur(10px);
+    margin-top: 20px;
 }
 
-.search-icon {
-    color: var(--neon-blue);
-    margin-right: 10px;
-}
-
+.search-icon { color: var(--neon-blue); margin-right: 10px; }
 .search-container input {
     flex: 1;
     background: transparent;
@@ -60,11 +57,7 @@
     font-size: 13px;
     outline: none;
 }
-
-.search-container input::placeholder {
-    color: var(--text-muted);
-}
-
+.search-container input::placeholder { color: var(--text-muted); }
 .search-btn {
     background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
     color: white;
@@ -77,7 +70,7 @@
     box-shadow: var(--glow-pink);
 }
 
-/* --- CARDS --- */
+/* --- CARDS (Deals & Popular) --- */
 .deal-card, .popular-card {
     min-width: 240px;
     background-color: var(--bg-panel);
@@ -87,21 +80,11 @@
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
-.card-image-wrapper {
-    position: relative;
-    height: 120px;
-}
-
-.card-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
+.card-image-wrapper { position: relative; height: 120px; }
+.card-image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
 .badge-discount {
     position: absolute;
-    top: 8px;
-    left: 8px;
+    top: 8px; left: 8px;
     background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
     color: white;
     padding: 3px 8px;
@@ -113,133 +96,54 @@
 
 .heart-btn {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 8px; right: 8px;
     background: rgba(0,0,0,0.5);
     color: white;
-    width: 28px;
-    height: 28px;
+    width: 28px; height: 28px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; justify-content: center; align-items: center;
     font-size: 16px;
     backdrop-filter: blur(4px);
 }
 
-.card-content {
-    padding: 12px;
-}
-
-.card-header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4px;
-}
-
-.card-header-row h4 {
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.distance {
-    font-size: 10px;
-    color: var(--text-muted);
-}
-
-.service-name, .category-label {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-}
-
-.price-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.price {
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--neon-green);
-}
-
-.old-price {
-    font-size: 12px;
-    color: var(--text-dark);
-    text-decoration: line-through;
-    margin-left: 4px;
-}
-
-.timer {
-    font-size: 10px;
-    color: var(--neon-blue);
-    background: rgba(0, 229, 255, 0.1);
-    padding: 2px 6px;
-    border-radius: 10px;
-}
+.card-content { padding: 12px; }
+.card-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.card-header-row h4 { font-size: 14px; font-weight: 600; }
+.distance { font-size: 10px; color: var(--text-muted); }
+.service-name, .category-label { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+.price-row { display: flex; justify-content: space-between; align-items: flex-end; }
+.price { font-size: 16px; font-weight: 800; color: var(--neon-green); }
+.old-price { font-size: 12px; color: var(--text-dark); text-decoration: line-through; margin-left: 4px; }
+.timer { font-size: 10px; color: var(--neon-blue); background: rgba(0, 229, 255, 0.1); padding: 2px 6px; border-radius: 10px; }
 
 /* --- CATEGORY GRID CARDS --- */
 .category-card {
     position: relative;
-    border-radius: 16px;
+    border-radius: 12px;
     overflow: hidden;
-    height: 120px;
-    border: 1px solid var(--border-color);
+    height: 110px;
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.15);
 }
-
-.category-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.6;
-    transition: transform 0.3s ease;
-}
-
-.category-card:hover img {
-    transform: scale(1.05);
-}
-
+.category-card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
 .category-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background: linear-gradient(0deg, rgba(6,6,11,1) 0%, rgba(6,6,11,0) 100%);
+    position: absolute; bottom: 0; left: 0; width: 100%; padding: 8px 10px;
+    background: linear-gradient(0deg, rgba(6,6,11,1) 0%, rgba(6,6,11,0.8) 60%, rgba(6,6,11,0) 100%);
+    display: flex; flex-direction: column; gap: 2px;
 }
-
-.category-overlay h4 {
-    font-size: 13px;
-    font-weight: 700;
-    margin-top: 4px;
-}
-
-.category-overlay p {
-    font-size: 10px;
-    color: var(--text-muted);
-}
-
-.cat-icon {
-    font-size: 18px;
-}
+.cat-header { display: flex; justify-content: space-between; align-items: center; }
+.cat-icon-badge { font-size: 14px; }
+.cat-arrow { color: var(--neon-blue); font-weight: 800; font-size: 12px; }
+.category-overlay h4 { font-size: 10px; font-weight: 800; text-transform: uppercase; color: var(--text-main); margin-top: 2px; }
+.category-overlay p { font-size: 9px; color: var(--text-muted); }
 
 /* --- VIBE CHAT BUTTON --- */
 .vibe-chat-btn {
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
+    position: fixed; bottom: 90px; right: 20px;
     background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
-    color: white;
-    padding: 10px 18px;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 700;
-    font-size: 14px;
+    color: white; padding: 10px 18px; border-radius: 30px;
+    display: flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 14px;
     box-shadow: 0 0 20px rgba(217, 70, 239, 0.6);
     z-index: 999;
 }

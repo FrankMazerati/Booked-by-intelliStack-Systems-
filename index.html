@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booked by IntelliStack</title>
-    
-    <!-- APP ICON -->
-    <link rel="icon" type="image/png" href="icon.png" />
-    <link rel="apple-touch-icon" href="icon.png" />
-
-    <!-- CSS FILES -->
+    <title>Booked - Home</title>
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
     <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="components.css">
@@ -18,41 +14,41 @@
 </head>
 <body>
 
-    <!-- 1. FIXED TOP TOOLBAR (Navigation) -->
+    <!-- 1. FIXED TOP TOOLBAR -->
     <nav class="top-toolbar">
-        <a href="#" class="active">
+        <a href="index.html" class="active">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
             <span>Home</span>
         </a>
-        <a href="#">
+        <a href="explore.html">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             <span>Explore</span>
         </a>
-        <a href="#">
+        <a href="bookings.html">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
             <span>Bookings</span>
         </a>
-        <a href="#">
+        <a href="saved.html">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
             <span>Saved</span>
         </a>
-        <a href="#">
+        <a href="rewards.html">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
             <span>Rewards</span>
         </a>
-        <a href="#">
+        <a href="profile.html">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
             <span>Profile</span>
         </a>
     </nav>
 
-    <!-- 2. HERO SECTION -->
-    <header class="hero-section">
+    <!-- 2. HERO SECTION WITH BACKGROUND GIRL -->
+    <header class="hero-section" style="background-image: linear-gradient(180deg, rgba(6, 6, 11, 0.1) 0%, rgba(6, 6, 11, 0.8) 80%, rgba(6, 6, 11, 1) 100%), url('assets/asset1.png');">
         <div class="hero-top-bar">
             <div class="user-profile-badge">
-                <img src="https://i.pravatar.cc/150?img=47" alt="User" class="avatar">
+                <img src="assets/profile.photo.png" alt="User" class="avatar">
                 <div class="user-info">
-                    <span class="user-name">Hey, Glam</span>
+                    <span class="user-name">Hey, Diamond</span>
                     <span class="user-points">⭐ 425 pts</span>
                 </div>
             </div>
@@ -64,20 +60,17 @@
 
         <div class="hero-content">
             <h2>Discover the people and places that help you <span>feel your best.</span></h2>
-            <!-- YOUR MAIN LOGO HERE -->
-            <img src="photo4.png" alt="Booked Logo" class="hero-main-logo">
+            <img src="assets/mainlogo.png" alt="Booked Logo" class="hero-main-logo">
         </div>
 
         <div class="search-container">
             <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" placeholder="Search for restaurants, barbers, salons, fitness, and more...">
+            <input type="text" placeholder="Search for restaurants, barbers, salons, fitness...">
             <button class="search-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
         </div>
     </header>
 
-    <!-- 3. MAIN CONTENT -->
-    <main id="app">
-        
+    <main>
         <!-- FLASH DEALS -->
         <section class="section-block">
             <div class="section-header">
@@ -86,92 +79,117 @@
                     <h3 class="section-title">Flash Deals</h3>
                     <span class="section-subtitle">Limited time. Big savings.</span>
                 </div>
-                <a href="#" class="see-all">See All ></a>
+                <a href="explore.html" class="see-all">See All ></a>
             </div>
             <div class="scroll-x">
-                <!-- Flash Deal Card 1 -->
-                <div class="deal-card">
+                <!-- Deal 1 -->
+                <a href="business.html" class="deal-card">
                     <div class="card-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80" alt="Barbershop">
                         <span class="badge-discount">36% OFF</span>
                     </div>
                     <div class="card-content">
-                        <div class="card-header-row">
-                            <h4>The Cut Barbershop</h4>
-                            <span class="distance">📍 1.1 mi</span>
-                        </div>
+                        <div class="card-header-row"><h4>The Cut Barbershop</h4><span class="distance">📍 1.1 mi</span></div>
                         <p class="service-name">Signature Cut</p>
                         <div class="price-row">
-                            <div class="price-group">
-                                <span class="price">$29</span>
-                                <span class="old-price">$45</span>
-                            </div>
+                            <div class="price-group"><span class="price">$29</span><span class="old-price">$45</span></div>
                             <span class="timer">⏱ 2h 18m left</span>
                         </div>
                     </div>
-                </div>
-                <!-- Flash Deal Card 2 -->
-                <div class="deal-card">
+                </a>
+                <!-- Deal 2 -->
+                <a href="business.html" class="deal-card">
                     <div class="card-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=500&q=80" alt="Nails">
                         <span class="badge-discount">50% OFF</span>
                     </div>
                     <div class="card-content">
-                        <div class="card-header-row">
-                            <h4>Nail Luxe</h4>
-                            <span class="distance">📍 1.8 mi</span>
-                        </div>
+                        <div class="card-header-row"><h4>Nail Luxe</h4><span class="distance">📍 1.8 mi</span></div>
                         <p class="service-name">Gel Manicure</p>
                         <div class="price-row">
-                            <div class="price-group">
-                                <span class="price">$40</span>
-                                <span class="old-price">$65</span>
-                            </div>
+                            <div class="price-group"><span class="price">$40</span><span class="old-price">$65</span></div>
                             <span class="timer">⏱ 3h 12m left</span>
                         </div>
                     </div>
-                </div>
+                </a>
+                <!-- Deal 3 -->
+                <a href="business.html" class="deal-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="Fitness">
+                        <span class="badge-discount">50% OFF</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header-row"><h4>Equinox Fitness</h4><span class="distance">📍 2.4 mi</span></div>
+                        <p class="service-name">Guest Pass</p>
+                        <div class="price-row">
+                            <div class="price-group"><span class="price">$25</span><span class="old-price">$50</span></div>
+                            <span class="timer">⏱ 5h 40m left</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </section>
 
-        <!-- BOOK SOMETHING (Categories Grid) -->
+        <!-- BOOK SOMETHING -->
         <section class="section-block">
-            <div class="section-header">
-                <h3 class="section-title">Book Something</h3>
-            </div>
+            <div class="section-header"><h3 class="section-title">Book Something</h3></div>
             <div class="category-grid">
-                <div class="category-card">
+                <a href="explore.html" class="category-card">
                     <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Restaurants">
                     <div class="category-overlay">
-                        <span class="cat-icon">🍽️</span>
-                        <h4>Restaurants</h4>
-                        <p>Great food. Good vibes.</p>
+                        <div class="cat-header"><span class="cat-icon-badge">🍽️</span><span class="cat-arrow">></span></div>
+                        <h4>RESTAURANTS</h4><p>Great food. Good vibes.</p>
                     </div>
-                </div>
-                <div class="category-card">
+                </a>
+                <a href="explore.html" class="category-card">
                     <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=500&q=80" alt="Barber Shops">
                     <div class="category-overlay">
-                        <span class="cat-icon">✂️</span>
-                        <h4>Barber Shops</h4>
-                        <p>Look good. Feel good.</p>
+                        <div class="cat-header"><span class="cat-icon-badge">✂️</span><span class="cat-arrow">></span></div>
+                        <h4>BARBER SHOPS</h4><p>Look good. Feel good.</p>
                     </div>
-                </div>
-                <div class="category-card">
+                </a>
+                <a href="explore.html" class="category-card">
                     <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&q=80" alt="Nail Salons">
                     <div class="category-overlay">
-                        <span class="cat-icon">💅</span>
-                        <h4>Nail Salons</h4>
-                        <p>Nails. Beauty. Confidence.</p>
+                        <div class="cat-header"><span class="cat-icon-badge">💅</span><span class="cat-arrow">></span></div>
+                        <h4>NAIL SALONS</h4><p>Nails. Beauty. Confidence.</p>
                     </div>
-                </div>
-                <div class="category-card">
+                </a>
+                <a href="explore.html" class="category-card">
                     <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="Fitness">
                     <div class="category-overlay">
-                        <span class="cat-icon">🏋️</span>
-                        <h4>Fitness</h4>
-                        <p>Stronger. Healthier. You.</p>
+                        <div class="cat-header"><span class="cat-icon-badge">🏋️</span><span class="cat-arrow">></span></div>
+                        <h4>FITNESS</h4><p>Stronger. Healthier. You.</p>
                     </div>
-                </div>
+                </a>
+                <a href="explore.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=500&q=80" alt="Spa">
+                    <div class="category-overlay">
+                        <div class="cat-header"><span class="cat-icon-badge">🧘</span><span class="cat-arrow">></span></div>
+                        <h4>SPA & WELLNESS</h4><p>Relax. Rejuvenate. Repeat.</p>
+                    </div>
+                </a>
+                <a href="explore.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=500&q=80" alt="Entertainment">
+                    <div class="category-overlay">
+                        <div class="cat-header"><span class="cat-icon-badge">🎵</span><span class="cat-arrow">></span></div>
+                        <h4>ENTERTAINMENT</h4><p>Live. Local. Unforgettable.</p>
+                    </div>
+                </a>
+                <a href="explore.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=500&q=80" alt="Shopping">
+                    <div class="category-overlay">
+                        <div class="cat-header"><span class="cat-icon-badge">🛍️</span><span class="cat-arrow">></span></div>
+                        <h4>SHOPPING</h4><p>Style. Brands. You.</p>
+                    </div>
+                </a>
+                <a href="#" class="category-card" style="opacity: 0.6;">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80" alt="Hotels">
+                    <div class="category-overlay">
+                        <div class="cat-header"><span class="cat-icon-badge">🏨</span><span class="cat-arrow">></span></div>
+                        <h4>HOTELS & SUITES</h4><p style="color: var(--neon-pink); font-size: 8px;">COMING SOON</p>
+                    </div>
+                </a>
             </div>
         </section>
 
@@ -179,57 +197,61 @@
         <section class="section-block">
             <div class="section-header">
                 <h3 class="section-title">Popular Near You</h3>
-                <a href="#" class="see-all">See All ></a>
+                <a href="explore.html" class="see-all">See All ></a>
             </div>
             <div class="scroll-x">
-                <!-- Popular Card 1 -->
-                <div class="popular-card">
+                <a href="business.html" class="popular-card">
                     <div class="card-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80" alt="Barbershop">
                         <button class="heart-btn">♡</button>
                     </div>
                     <div class="card-content">
-                        <h4>The Cut Barbershop</h4>
-                        <p class="category-label">Barber Shop</p>
-                        <div class="meta-row">
-                            <span class="rating">⭐ 4.8 (1.2k)</span>
-                            <span class="distance">📍 1.1 mi</span>
-                        </div>
+                        <h4>The Cut Barbershop</h4><p class="category-label">Barber Shop</p>
+                        <div class="meta-row"><span class="rating">⭐ 4.8 (1.2k)</span><span class="distance">📍 1.1 mi</span></div>
                     </div>
-                </div>
-                <!-- Popular Card 2 -->
-                <div class="popular-card">
+                </a>
+                <a href="business.html" class="popular-card">
                     <div class="card-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=500&q=80" alt="Nails">
                         <button class="heart-btn">♡</button>
                     </div>
                     <div class="card-content">
-                        <h4>Nails by Luxe</h4>
-                        <p class="category-label">Nail Salon</p>
-                        <div class="meta-row">
-                            <span class="rating">⭐ 4.7 (642)</span>
-                            <span class="distance">📍 1.8 mi</span>
-                        </div>
+                        <h4>Nails by Luxe</h4><p class="category-label">Nail Salon</p>
+                        <div class="meta-row"><span class="rating">⭐ 4.7 (642)</span><span class="distance">📍 1.8 mi</span></div>
                     </div>
-                </div>
+                </a>
+                <a href="business.html" class="popular-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="Fitness">
+                        <button class="heart-btn">♡</button>
+                    </div>
+                    <div class="card-content">
+                        <h4>Equinox Fitness</h4><p class="category-label">Fitness</p>
+                        <div class="meta-row"><span class="rating">⭐ 4.6 (932)</span><span class="distance">📍 2.6 mi</span></div>
+                    </div>
+                </a>
+                <a href="business.html" class="popular-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=500&q=80" alt="Restaurant">
+                        <button class="heart-btn">♡</button>
+                    </div>
+                    <div class="card-content">
+                        <h4>STK Steakhouse</h4><p class="category-label">Restaurant</p>
+                        <div class="meta-row"><span class="rating">⭐ 4.8 (1.5k)</span><span class="distance">📍 2.3 mi</span></div>
+                    </div>
+                </a>
             </div>
         </section>
 
-        <!-- FOOTER BANNER -->
         <div class="footer-banner">
             <h2>Make time for what matters.</h2>
             <p>Find it. Choose it. <span>Book it.</span></p>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Discover something new.</p>
         </div>
-
     </main>
 
-    <!-- FLOATING VIBE CHAT BUTTON -->
-    <button class="vibe-chat-btn">
-        <span class="chat-icon">💬</span>
-        <span>Vibe Chat</span>
-    </button>
+    <button class="vibe-chat-btn"><span class="chat-icon">💬</span><span>Vibe Chat</span></button>
 
-    <!-- JS FILES -->
     <script src="state.js"></script>
     <script src="router.js"></script>
     <script src="app.js"></script>

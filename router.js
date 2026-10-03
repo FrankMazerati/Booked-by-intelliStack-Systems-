@@ -1,19 +1,21 @@
-const routes = new Map();
-
-export function route(path, handler) {
-  routes.set(path, handler);
-}
-
-export function navigate(path) {
-  history.pushState({}, "", `#${path}`);
-  renderCurrent();
-}
-
-export async function renderCurrent() {
-  const path = location.hash.replace(/^#/, "") || "/";
-  const handler = routes.get(path) || routes.get("/");
-  if (handler) await handler();
-}
-
-window.addEventListener("popstate", renderCurrent);
-window.addEventListener("hashchange", renderCurrent);
+// Handles navigation between different views (Home, Explore, Bookings, etc.)
+const Router = {
+    init() {
+        const navLinks = document.querySelectorAll('.top-toolbar a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Update active state
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                
+                // Update state
+                AppState.activeTab = link.querySelector('span').innerText.toLowerCase();
+                
+                // Here you would typically call a function to render the new view
+                console.log(`Navigating to: ${AppState.activeTab}`);
+            });
+        });
+    }
+};

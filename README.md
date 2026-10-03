@@ -1,21 +1,27 @@
 # BOOKED
 
-Real People. Real Services. Real Time.
+**Real People. Real Services. Real Time.**
 
-BOOKED is a service-discovery and appointment-booking platform with customer and business experiences.
+BOOKED is a service-discovery and appointment-booking platform designed with a vibrant, neon cyberpunk aesthetic. It connects users with local businesses for restaurants, barbershops, nail salons, fitness, and more.
 
-## Initial build
+## Design Direction
+*   **Theme:** Cyberpunk / Neon Dark Mode
+*   **Colors:** Deep blacks, Neon Pink, Neon Blue, and Neon Green accents.
+*   **Layout:** Mobile-first, app-like interface with a fixed top navigation toolbar.
 
-The first vertical slice is:
+## Tech Stack
+*   **HTML5:** Semantic structure
+*   **CSS3:** Modular architecture (`variables.css`, `global.css`, `components.css`, `styles.css`, `responsive.css`)
+*   **JavaScript:** Vanilla JS for routing, state management, and interactivity.
 
-Welcome/Login → Create Account → Customer Home → Search → Business Profile → Service → Date/Time → Confirmation → My Bookings
-
-The current prototype uses local browser state so the flow can be tested before a backend is connected.
-
-## Design direction
-
-Deep navy, BOOKED yellow, hot pink, cyan, neon gradients, glass panels, lifestyle photography, bold typography, glowing borders, and mobile-first layouts.
-
-## Development note
-
-`index.html` is intentionally ignored by Git during the initial foundation phase so it can remain locally uncommitted while the project structure is established.
+## Features (Current & Planned)
+*   [x] Fixed top navigation toolbar
+*   [x] Neon-themed hero section with search
+*   [x] Flash Deals carousel
+*   [x] Category grid (Restaurants, Barber Shops, Nail Salons, Fitness)
+*   [x] Popular Near You section
+*   [ ] User Authentication (Login/Signup)
+*   [ ] Booking flow (Date/Time selection)
+*   [ ] Business profiles & Employee management
+*   [ ] QR Code scanning for proof of payment
+*   [ ] Vibe Chat integration

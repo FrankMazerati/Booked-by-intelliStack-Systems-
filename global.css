@@ -10,9 +10,8 @@ body {
     background-color: var(--bg-dark);
     color: var(--text-main);
     font-family: var(--font-main);
-    /* Padding top for fixed header, bottom for floating button */
-    padding-top: 70px; 
-    padding-bottom: 100px;
+    padding-top: 70px; /* Space for fixed toolbar */
+    padding-bottom: 100px; /* Space for Vibe Chat button */
     -webkit-font-smoothing: antialiased;
 }
 
@@ -20,7 +19,5 @@ a { text-decoration: none; color: inherit; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 img { max-width: 100%; display: block; }
 
-/* Hide scrollbar for Chrome/Safari/Opera */
 .scroll-x::-webkit-scrollbar { display: none; }
-/* Hide scrollbar for IE, Edge and Firefox */
 .scroll-x { -ms-overflow-style: none; scrollbar-width: none; }

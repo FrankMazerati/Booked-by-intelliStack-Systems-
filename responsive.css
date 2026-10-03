@@ -1,11 +1,23 @@
-@media (max-width: 800px) {
-  .topbar { padding: 16px; }
-  .hero-grid { grid-template-columns: 1fr; gap: 24px; width:min(600px, calc(100% - 24px)); }
-  .hero { padding-top: 15px; }
-  .hero-copy { text-align:center; }
-  .hero-copy p { margin-left:auto; margin-right:auto; }
-  .actions { justify-content:center; }
-  .auth-card { padding:24px; }
-  .cards { grid-template-columns:1fr; }
-  .container { width:calc(100% - 24px); }
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (min-width: 768px) {
+    /* Center the app content on larger screens */
+    body {
+        max-width: 600px;
+        margin: 0 auto;
+        border-left: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+        box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    }
+
+    .top-toolbar {
+        max-width: 600px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+    }
+
+    .vibe-chat-btn {
+        right: calc(50% - 280px);
+    }
 }
